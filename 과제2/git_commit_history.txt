@@ -1,0 +1,25 @@
+[김민준] Thu May 11 23:44:47 2023 +0900 과제2 제출 05649a4
+[김민준] Thu May 11 23:44:01 2023 +0900 김민준: 최종 communication diagram 작성 d9be701
+[Yonghyun Hong] Thu May 11 23:41:26 2023 +0900 홍용현 : 최종 mdj & pdf 150468a
+[Yonghyun Hong] Thu May 11 23:40:50 2023 +0900 홍용현 : 최종 mdj & pdf 4231bcb
+[Minjoon Kim] Thu May 11 23:35:30 2023 +0900 이채영 : 최종 .mdj & .pdf 34eccbe
+[chaeyounglee] Thu May 11 23:17:08 2023 +0900 이채영 : 최종 .mdj & .pdf 63a8066
+[kopfstand1931] Thu May 11 19:18:52 2023 +0900 최승혁: communication diagram 최승혁 1a7e316
+[kopfstand1931] Thu May 11 19:17:35 2023 +0900 최승혁: communication diagram 0d4a29c
+[kopfstand1931] Wed May 10 17:43:29 2023 +0900 최승혁 communication diagram PDF 추가 f4bfed6
+[Minjoon Kim] Wed May 10 16:27:41 2023 +0900 이채영 : communication diagram 6c3a66e
+[chaeyounglee] Wed May 10 16:25:38 2023 +0900 이채영 : communication diagram 99fb81d
+[Yonghyun Hong] Wed May 10 16:15:19 2023 +0900 Merge pull request #3 from dydgus1052/main-1 dd8efd5
+[Minjoon Kim] Wed May 10 16:15:11 2023 +0900 이채영: first commit d6e98fa
+[Yonghyun Hong] Wed May 10 16:14:20 2023 +0900 communication_diagram.pdf 16cd434
+[Yonghyun Hong] Wed May 10 16:13:27 2023 +0900 Merge pull request #1 from sanbonai06/main 6168e6a
+[kopfstand1931] Wed May 10 16:12:42 2023 +0900 HW2 다이어그램 캡쳐 추가 d8bbfff
+[lcy923] Wed May 10 16:12:13 2023 +0900 이채영: first commit b889985
+[kopfstand1931] Wed May 10 16:07:55 2023 +0900 최승혁 HW2 6d47186
+[김민준] Wed May 10 16:06:46 2023 +0900 minjunKim: pdf 추가 9f4f214
+[Minjoon Kim] Wed May 10 16:05:11 2023 +0900 Merge pull request #1 from dydgus1052/main-1 bdad96f
+[Yonghyun Hong] Wed May 10 16:01:32 2023 +0900 Create yonghyunhong.mdj d05462f
+[김민준] Wed May 10 16:00:24 2023 +0900 .DS_Store 삭제 eeafc8b
+[김민준] Wed May 10 15:59:53 2023 +0900 gitIgnore 수정 682fa1c
+[김민준] Wed May 10 15:58:39 2023 +0900 minjunKim: first commit f230602
+[김민준] Wed May 10 15:08:51 2023 +0900 init 3ba2e8d

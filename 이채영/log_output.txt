@@ -1,0 +1,9 @@
+[lcy923] Wed May 10 16:12:13 2023 +0900 이채영: first commit b889985
+[kopfstand1931] Wed May 10 16:07:55 2023 +0900 최승혁 HW2 6d47186
+[김민준] Wed May 10 16:06:46 2023 +0900 minjunKim: pdf 추가 9f4f214
+[Minjoon Kim] Wed May 10 16:05:11 2023 +0900 Merge pull request #1 from dydgus1052/main-1 bdad96f
+[Yonghyun Hong] Wed May 10 16:01:32 2023 +0900 Create yonghyunhong.mdj d05462f
+[김민준] Wed May 10 16:00:24 2023 +0900 .DS_Store 삭제 eeafc8b
+[김민준] Wed May 10 15:59:53 2023 +0900 gitIgnore 수정 682fa1c
+[김민준] Wed May 10 15:58:39 2023 +0900 minjunKim: first commit f230602
+[김민준] Wed May 10 15:08:51 2023 +0900 init 3ba2e8d
