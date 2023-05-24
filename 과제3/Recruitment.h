@@ -23,8 +23,6 @@ public:
 	*/
 	Recruitment(string task, string recruitmentNumber, string deadline, string name, string ssn);
 
-	void setMemberID(string MemberID) { this->MemberID = MemberID; }
-
 	string getDeadline() { return deadline; }
 	string getTask() { return task; }
 	string getCompanyName() { return companyName; }
@@ -35,7 +33,6 @@ public:
 	void setApplyNumber(bool sign) { sign ? this->applyNumber++ : this->applyNumber--; }
 
 private:
-	string MemberID;
 	string deadline;
 	string task;
 	string companyName;

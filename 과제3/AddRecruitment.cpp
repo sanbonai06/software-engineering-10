@@ -42,7 +42,6 @@ void AddRecruitment::addNewRecruitment(string task, string recruitmentNumber, st
 		string name = member->getName();
 		string ssn = member->getSSN();
 		Recruitment *newRecruitment = new Recruitment(task, recruitmentNumber, deadline, name, ssn);
-		newRecruitment->setMemberID(dataBase->getMemberList()[dataBase->getLogInIndex()]->getID());
 		member->createRecruitment(newRecruitment);
 	}
 }
