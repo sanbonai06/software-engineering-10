@@ -1,5 +1,5 @@
 #include "LogIn.h"
-#include "Database.h"
+#include "DataBase.h"
 #include "Member.h"
 #include "LogInUI.h"
 #include <iostream>
@@ -11,6 +11,12 @@ LogIn::LogIn(DataBase* db) {
     this->db = db;
 }
 
+/**
+ * id와 password를 통해 유저 정보를 찾아서 반환
+ * @param id 
+ * @param password 
+ * @return Member* 
+ */
 Member* LogIn::checkMemberInfo(string id, string password) {
     
     vector<Member*> newMemberList = db->getMemberList();
@@ -20,5 +26,4 @@ Member* LogIn::checkMemberInfo(string id, string password) {
             return newMemberList[i];
         }
     }
-    return NULL;
 }
