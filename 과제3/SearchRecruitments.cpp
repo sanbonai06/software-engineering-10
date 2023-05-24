@@ -17,8 +17,8 @@ SearchRecruitments::SearchRecruitments(DataBase* dataBase)
 	searchRecruitmentsUI->startInterface();
 }
 
-vector<Recruitment*> SearchRecruitments::showSearchedRecruitments()
+vector<ApplyInfo*> SearchRecruitments::showSearchedRecruitments()
 {
 	Member* loginMember = dataBase->GetMemberList()[dataBase->GetLogInIndex()];
-	return loginMember->GetRecruitmentList();
+	return loginMember->getApplyInfoLIst();
 }

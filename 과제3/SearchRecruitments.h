@@ -5,7 +5,7 @@ using namespace std;
 
 class DataBase;
 class SearchRecruitmentsUI;
-class Recruitment;
+class ApplyInfo;
 
 class SearchRecruitments
 {
@@ -17,7 +17,7 @@ public:
 
 	SearchRecruitmentsUI* getSearchRecruitmentsUI() { return searchRecruitmentsUI; };
 
-	vector<Recruitment*> showSearchedRecruitments();
+	vector<ApplyInfo*> showSearchedRecruitments();
 
 private:
 	DataBase* dataBase;

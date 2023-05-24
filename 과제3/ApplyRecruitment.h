@@ -4,7 +4,7 @@
 class DataBase;
 class ApplyRecruitmentUI;
 class Member;
-class Recruitment;
+class ApplyInfo;
 
 using namespace std;
 
@@ -15,7 +15,7 @@ public:
 	ApplyRecruitment(DataBase* dataBase);
 
 	ApplyRecruitmentUI* getApplyRecruitmentUI() { return applyRecruitmentUI; };
-	Recruitment* applyRecruitment(string businessNumber);
+	ApplyInfo* addApplyRecruitment(string businessNumber);
 
 private:
 	DataBase* dataBase;

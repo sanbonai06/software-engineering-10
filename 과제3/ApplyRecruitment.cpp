@@ -21,7 +21,7 @@ ApplyRecruitment::ApplyRecruitment(DataBase* dataBase)
 	applyRecruitmentUI->startInterface();
 }
 
-Recruitment* ApplyRecruitment::applyRecruitment(string businessNumber)
+ApplyInfo* ApplyRecruitment::addApplyRecruitment(string businessNumber)
 {
 	Member* loginMember = dataBase->GetMemberList()[dataBase->GetLogInIndex()];
 
@@ -39,9 +39,11 @@ Recruitment* ApplyRecruitment::applyRecruitment(string businessNumber)
 				if (listOfRecruitments[j]->BusinessNumber() == businessNumber)
 				{
 					listOfRecruitments[j]->setRecruitmentNumber();
-					loginMember->CreateRecruitment(listOfRecruitments[j]);
+					ApplyInfo* newApplyInfo = new ApplyInfo(listOfRecruitments[j]->GetTask(), listOfRecruitments[j]->GetRecruitmentNumber(), listOfRecruitments[j]->GetDeadline(), listOfRecruitments[j]->GetCompanyName(), listOfRecruitments[j]->BusinessNumber());
+
+					loginMember->createApply(newApplyInfo);
 					
-					return listOfRecruitments[j];
+					return newApplyInfo;
 				}
 
 			}
