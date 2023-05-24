@@ -18,6 +18,7 @@
 #include "SearchRecruitmentsUI.h"
 #include "SearchRecruitment.h"
 #include "SearchRecruitmentUI.h"
+#include "ApplyInfo.h"
 
 
 void doTask();
