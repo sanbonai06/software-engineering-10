@@ -19,19 +19,13 @@ ExitMember::ExitMember(DataBase* dataBase)
 	exitMemberUI->StartInterface();
 }
 
-bool ExitMember::TryExitMember(std::string id)
+string ExitMember::TryExitMember()
 {
-	int i = 0;
+	vector<Member*> memberList = (this->dataBase)->GetMemberList();
+	int loginIndex = this->dataBase->GetLogInIndex();
+	string returnId = memberList[loginIndex]->getID();
+	this->dataBase->DeleteMember(loginIndex);
 
-	std::vector<Member*> memberList = (this->dataBase)->GetMemberList();
-
-
-	for (i = 0; i < memberList.size(); i++) {
-		if (memberList[i]->getID() == id) {
-			this->dataBase->DeleteMember(i);
-			return true;
-		}
-	}
-	return false;
+	return returnId;
 
 }

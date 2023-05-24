@@ -1,6 +1,7 @@
 ﻿#include "AddRecruitmentUI.h"
 #include "AddRecruitment.h"
 #include "File.h"
+using namespace std;
 
 AddRecruitmentUI::AddRecruitmentUI()
 {
@@ -15,9 +16,9 @@ void AddRecruitmentUI::StartInterface()
 void AddRecruitmentUI::createNewRecruitment(AddRecruitment* AddRecruitment, File* file)
 {
 	// 파일 입력 받기
-	std::string task = "";
-	std::string recruitmentNumber = "";
-	std::string deadline = "";
+	string task = "";
+	string recruitmentNumber = "";
+	string deadline = "";
 
 	file->ifs.seekg(file->readed);
 	file->ifs >> task >> recruitmentNumber >> deadline;
@@ -27,10 +28,5 @@ void AddRecruitmentUI::createNewRecruitment(AddRecruitment* AddRecruitment, File
 
 	file->ofs << "3.1. 채용 정보 등록" << '\n';
 
-	std::cout << "3.1. 채용 정보 등록" << '\n';
-
 	file->ofs << "> " << task << " " << recruitmentNumber << " " << deadline << '\n' << '\n';
-
-	std::cout << "> task" << task << " recruitmentNum" << recruitmentNumber << " deadline" << deadline << '\n' << '\n';
-
 }

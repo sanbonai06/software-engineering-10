@@ -11,8 +11,8 @@ void LogInUI::startInterface() {
 void LogInUI::inputIdPw(LogIn* login, File* file) {
     
     // 파일 입력 받기
-	std::string id = "";
-	std::string password = "";
+	string id = "";
+	string password = "";
 
 	file->ifs.seekg(file->readed);
 	file->ifs >> id >> password;
@@ -21,10 +21,7 @@ void LogInUI::inputIdPw(LogIn* login, File* file) {
 	Member* member = login->checkMemberInfo(id, password);
 
 	file->ofs << "2.1. 로그인" << '\n';
-	
-	printf("2.1. 로그인\n");
 
 	file->ofs << "> " << member->getID() << " " << member->getPassword() << " " << '\n' << '\n';
 
-	std::cout << ">id " << member->getID() << " pw " << member->getPassword() << " " << '\n' << '\n';
 }

@@ -1,17 +1,18 @@
 #include "File.h"
 #include <iostream>
+using namespace std;
 
 File::File()
 {
-	// ÆÄÀÏ ÀÔÃâ·ÂÀ» À§ÇÑ ÃÊ±âÈ­
-	ifs.open("input.txt", std::ios::in);
+	// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê±ï¿½È­
+	ifs.open("input.txt",  ios::in);
 	if (ifs.fail())
 	{
-		std::cerr << "ifs Error!" << std::endl;
+		cerr << "ifs Error!" <<  endl;
 	}
-	ofs.open("output.txt", std::ios::out | std::ios::app);
+	ofs.open("output.txt",  ios::out |  ios::app);
 	if (ofs.fail())
 	{
-		std::cerr << "ofs Error!" << std::endl;
+		cerr << "ofs Error!" <<  endl;
 	}
 }

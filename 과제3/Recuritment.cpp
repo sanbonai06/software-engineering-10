@@ -1,5 +1,6 @@
 #include "Recruitment.h"
 #include <string>
+using namespace std;
 
 Recruitment::Recruitment()
 {
@@ -11,10 +12,10 @@ Recruitment::Recruitment()
 	applyNumber = 0;
 }
 
-Recruitment::Recruitment(std::string task, std::string recruitmentNumber, std::string deadline, std::string name, std::string ssn)
+Recruitment::Recruitment(string task,  string recruitmentNumber,  string deadline,  string name,  string ssn)
 {
 	this->task = task;
-	this->recruitmentNumber = std::stoi(recruitmentNumber);
+	this->recruitmentNumber =  stoi(recruitmentNumber);
 	this->deadline = deadline;
 	this->companyName = name;
 	this->businessNumber = ssn;

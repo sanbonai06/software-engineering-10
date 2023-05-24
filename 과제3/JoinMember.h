@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+using namespace std;
 
 class DataBase;
 class JoinMemberUI;
@@ -12,7 +13,7 @@ public:
 
 	JoinMemberUI* GetJoinMemberUI() { return joinMemberUI; }
 
-	bool AddNewMember(std::string user_type, std::string name, std::string SSN, std::string id, std::string password);
+	bool AddNewMember(string user_type,  string name,  string SSN,  string id,  string password);
 
 private:
 	DataBase* dataBase;

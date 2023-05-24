@@ -1,5 +1,7 @@
 #pragma once
 #include <iostream>
+#include <string>
+using namespace std;
 
 class DataBase;
 class ExitMemberUI;
@@ -12,7 +14,7 @@ public:
 
 	ExitMemberUI* GetExitMemberUI() { return exitMemberUI; }
 
-	bool TryExitMember(std::string id);
+	string TryExitMember();
 
 private:
 	DataBase* dataBase;

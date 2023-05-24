@@ -5,6 +5,7 @@
 #include "CompanyMember.h"
 #include "GeneralMember.h"
 #include <cstring>
+using namespace std;
 
 JoinMember::JoinMember()
 {
@@ -20,11 +21,11 @@ JoinMember::JoinMember(DataBase* dataBase)
 	joinMemberUI->StartInterface();
 }
 
-bool JoinMember::AddNewMember(std::string user_type, std::string name, std::string ssn, std::string id, std::string password)
+bool JoinMember::AddNewMember(string user_type,  string name,  string ssn,  string id,  string password)
 {
 	int i = 0;
 
-	std::vector<Member*> memberList = (this->dataBase)->GetMemberList();
+	vector<Member*> memberList = (this->dataBase)->GetMemberList();
 
 	for (i = 0; i < memberList.size(); i++) {
 		if (memberList[i]->getID() == id) {
@@ -32,7 +33,7 @@ bool JoinMember::AddNewMember(std::string user_type, std::string name, std::stri
 		}
 	}
 
-	if (std::stoi(user_type) == 1) {
+	if (stoi(user_type) == 1) {
 		CompanyMember* member = new CompanyMember(user_type, name, ssn, id, password);
 		dataBase->AddMember(member);
 
@@ -42,7 +43,6 @@ bool JoinMember::AddNewMember(std::string user_type, std::string name, std::stri
 		dataBase->AddMember(member);
 
 	}
-	std::cout << "회원 가입. user_type : " << user_type << ", name : " << name << ", ssn :" << ssn << ", id : " << id << ", password : " << password << "\n";
 	return true;
 
 

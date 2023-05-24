@@ -3,6 +3,7 @@
 #include "Member.h"
 #include "DataBase.h"
 #include "GeneralMember.h"
+using namespace std;
 
 SearchRecruitments::SearchRecruitments()
 {
@@ -22,6 +23,6 @@ vector<ApplyInfo*> SearchRecruitments::showSearchedRecruitments()
 {
 	Member* findMember = dataBase->GetMemberList()[dataBase->GetLogInIndex()];
 	GeneralMember* loginMember = dynamic_cast<GeneralMember*>(findMember);
-	if(std::stoi(loginMember->getType()) == 2) 
+	if(stoi(loginMember->getType()) == 2) 
 		return loginMember->getApplyInfoList();
 }

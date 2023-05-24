@@ -4,6 +4,7 @@
 #include "Recruitment.h"
 #include "Member.h"
 #include "CompanyMember.h"
+using namespace std;
 
 SearchCompanyRecruitments::SearchCompanyRecruitments()
 {
@@ -19,10 +20,10 @@ SearchCompanyRecruitments::SearchCompanyRecruitments(DataBase* dataBase)
 	searchCompanyRecruitmentsUI->StartInterface();
 }
 
-std::vector<Recruitment*> SearchCompanyRecruitments::ShowCompanyRecruitments()
+vector<Recruitment*> SearchCompanyRecruitments::ShowCompanyRecruitments()
 {
 	Member* findMember = dataBase->GetMemberList()[dataBase->GetLogInIndex()];
 	CompanyMember* member = dynamic_cast<CompanyMember*>(findMember);
-	if(std::stoi(member->getType()) == 1)
+	if(stoi(member->getType()) == 1)
 		return member->getRecruitmentList();
 }

@@ -3,6 +3,7 @@
 #include "StatisticsApplyInformationUI.h"
 #include <map>
 #include <string>
+using namespace std;
 
 class DataBase;
 class StatisticsApplyInformation;
@@ -16,7 +17,7 @@ public:
 
 	StatisticsApplyInformationUI* GetStatisticsApplyInformationUI() { return statisticsApplyInformationUI; }
 
-	void ShowStaticsApplyInformation(std::map<std::string, int>& taskCountMap);
+	void ShowStaticsApplyInformation(map<string, int>& taskCountMap);
 
 private:
 	DataBase* dataBase;

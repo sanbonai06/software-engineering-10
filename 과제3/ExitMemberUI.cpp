@@ -2,6 +2,7 @@
 #include "ExitMember.h"
 #include "Member.h"
 #include "File.h"
+using namespace std;
 
 ExitMemberUI::ExitMemberUI()
 {
@@ -10,26 +11,13 @@ ExitMemberUI::ExitMemberUI()
 
 void ExitMemberUI::StartInterface()
 {
-	// GUI°æ¿ì PopUpÃ¢ »ý¼º, ÀÌ¹ø °úÁ¦¿¡¼­´Â ÆÄÀÏ ÀÔÃâ·ÂÀÌ±â ¶§¹®¿¡ ¾Æ¹«·± ±â´ÉÀ» ÇÏÁö ¾ÊÀ½.
+	// GUIï¿½ï¿½ï¿½ PopUpÃ¢ ï¿½ï¿½ï¿½ï¿½, ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Æ¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
 }
 
 void ExitMemberUI::SelectExitMember(ExitMember* exitMember, File* file)
 {
-	// ÆÄÀÏ ÀÔ·Â ¹Þ±â
-	std::string id = "";
-
-	file->ifs.seekg(file->readed);
-	file->ifs >> id;
-	file->readed = file->ifs.tellg();
-
-	if (exitMember->TryExitMember(id)) {
-		file->ofs << "1.2. È¸¿øÅ»Åð" << '\n';
-		file->ofs << "> " << id << " " << '\n' << '\n';
-	}
-	else {
-		file->ofs << "1.2. È¸¿øÅ»Åð" << '\n';
-		file->ofs << "È¸¿øÅ»Åð ½ÇÆÐ" << '\n' << '\n';
-	}
-
+	
+	file->ofs << "1.2. È¸ï¿½ï¿½Å»ï¿½ï¿½" << '\n';
+	file->ofs << "> " << exitMember->TryExitMember() << " " << '\n' << '\n';
 
 }

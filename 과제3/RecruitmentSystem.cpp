@@ -27,6 +27,7 @@
 #include "CompanyMember.h"
 #include "Member.h"
 #include "Recruitment.h"
+using namespace std;
 
 
 void doTask();
@@ -51,8 +52,6 @@ void doTask()
 	{
 		file->ifs >> menu_level_1 >> menu_level_2;
 		file->readed = file->ifs.tellg();
-
-		std::cout << menu_level_1 << menu_level_2 << "\n";
 
 		switch (menu_level_1)
 		{

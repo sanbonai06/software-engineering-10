@@ -3,10 +3,10 @@
 
 Member::Member()
 {
-	id = 1;// For Test
+	id = 1; // For Test
 }
 
-Member::Member(std::string user_type, std::string name, std::string ssn, std::string id, std::string password)
+Member::Member(std::string user_type, string name, string ssn, string id, string password)
 {
 	this->user_type = user_type;
 	this->name = name;
@@ -15,11 +15,13 @@ Member::Member(std::string user_type, std::string name, std::string ssn, std::st
 	this->password = password;
 }
 
-bool Member::checkIdAndPassword(string id, string password) {
-	return strcmp(this->id.c_str(), id.c_str()) == 0 && 
-                strcmp(this->password.c_str(), password.c_str()) == 0;
+bool Member::checkIdAndPassword(string id, string password)
+{
+	return strcmp(this->id.c_str(), id.c_str()) == 0 &&
+		   strcmp(this->password.c_str(), password.c_str()) == 0;
 }
 
-bool Member::checkId(string id) {
+bool Member::checkId(string id)
+{
 	return strcmp(this->id.c_str(), id.c_str()) == 0;
 }

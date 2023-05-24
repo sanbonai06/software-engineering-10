@@ -1,5 +1,6 @@
 #pragma once
 #include <vector>
+using namespace std;
 
 class DataBase;
 class SearchCompanyRecruitmentsUI;
@@ -13,7 +14,7 @@ public:
 
 	SearchCompanyRecruitmentsUI* GetSearchCompanyRecruitmentsUI() { return searchCompanyRecruitmentsUI; }
 
-	std::vector<Recruitment*> ShowCompanyRecruitments();
+	vector<Recruitment*> ShowCompanyRecruitments();
 
 private:
 	DataBase* dataBase;

@@ -2,6 +2,7 @@
 
 #include "Member.h"
 #include <vector>
+using namespace std;
 
 class Recruitment;
 

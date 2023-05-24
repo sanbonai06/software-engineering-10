@@ -10,7 +10,7 @@ class DataBase
 public:
 	DataBase();
 
-	std::vector<Member*> GetMemberList() { return memberList; }
+	vector<Member*> GetMemberList() { return memberList; }
 
 
 	int GetLogInIndex() { return logInIndex; }
@@ -22,7 +22,7 @@ public:
 
 
 private:
-	std::vector<Member*> memberList;
+	vector<Member*> memberList;
 
 	int logInIndex;
 };

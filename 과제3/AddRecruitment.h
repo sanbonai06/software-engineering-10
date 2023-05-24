@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+using namespace std;
 
 class DataBase;
 class AddRecruitmentUI;
@@ -12,7 +13,7 @@ public:
 
 	AddRecruitmentUI* GetAddRecruitmentUI() { return addRecruitmentUI; }
 
-	void AddNewRecruitment(std::string task, std::string recruitmentNumber, std::string deadline);
+	void AddNewRecruitment(string task, string recruitmentNumber, string deadline);
 
 private:
 	DataBase* dataBase;

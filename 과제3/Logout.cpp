@@ -3,6 +3,7 @@
 #include "DataBase.h"
 #include "Member.h"
 #include <vector>
+using namespace std;
 
 Logout::Logout() {
     this->dataBase = nullptr;
@@ -16,10 +17,10 @@ Logout::Logout(DataBase* dataBase) {
     logoutUI->startInterface();
 }
 
-std::string Logout::TryLogout()
+string Logout::TryLogout()
 {
     int index = this->dataBase->GetLogInIndex();
-    std::vector<Member*> memberList = (this->dataBase)->GetMemberList();
+     vector<Member*> memberList = (this->dataBase)->GetMemberList();
     string id = memberList[index]->getID();
     this->dataBase->setLogInIndex(-1);
     return id;
