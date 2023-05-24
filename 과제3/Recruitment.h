@@ -32,7 +32,7 @@ public:
 	int getApplyNumber() { return applyNumber; }
 	string getBusinessNumber() { return businessNumber; }
 
-	void setRecruitmentNumber() { this->recruitmentNumber++; }
+	void setApplyNumber(bool sign) { sign ? this->applyNumber++ : this->applyNumber--; }
 
 private:
 	string MemberID;

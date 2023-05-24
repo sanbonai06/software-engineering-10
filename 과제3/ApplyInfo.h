@@ -17,8 +17,6 @@ public:
 	int getRecruitmentNumber() { return recruitmentNumber; }
 	string getbusinessNumber() { return businessNumber; }
 
-	void setRecruitmentNumber() { this->recruitmentNumber++; }
-
 private:
 	string MemberID;
 	string deadline;

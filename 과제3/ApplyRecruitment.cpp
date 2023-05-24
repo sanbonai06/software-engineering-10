@@ -42,7 +42,7 @@ ApplyInfo *ApplyRecruitment::addApplyRecruitment(string businessNumber)
 			{
 				if (listOfRecruitments[j]->getBusinessNumber() == businessNumber)
 				{
-					listOfRecruitments[j]->setRecruitmentNumber();
+					listOfRecruitments[j]->setApplyNumber(true);
 					ApplyInfo *newApplyInfo = new ApplyInfo(listOfRecruitments[j]->getTask(), listOfRecruitments[j]->getRecruitmentNumber(), listOfRecruitments[j]->getDeadline(), listOfRecruitments[j]->getCompanyName(), listOfRecruitments[j]->getBusinessNumber());
 
 					loginMember->createApply(newApplyInfo);
