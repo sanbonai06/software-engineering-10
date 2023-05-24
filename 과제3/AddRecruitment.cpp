@@ -22,7 +22,7 @@ AddRecruitment::AddRecruitment(DataBase* dataBase)
 void AddRecruitment::AddNewRecruitment(std::string task, std::string recruitmentNumber, std::string deadline)
 {
 	Member* member = dataBase->GetMemberList()[dataBase->GetLogInIndex()];
-	std::string name = member->getID();
+	std::string name = member->getName();
 	std::string ssn = member->getSSN();
 	Recruitment* newRecruitment = new Recruitment(task, recruitmentNumber, deadline, name, ssn);
 	newRecruitment->SetMemberID(dataBase->GetMemberList()[dataBase->GetLogInIndex()]->getID());

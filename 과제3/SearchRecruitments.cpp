@@ -19,6 +19,6 @@ SearchRecruitments::SearchRecruitments(DataBase* dataBase)
 
 vector<Recruitment*> SearchRecruitments::showSearchedRecruitments()
 {
-	Member* member = dataBase->GetMemberList()[dataBase->GetLogInIndex()];
-	return member->GetRecruitmentList();
+	Member* loginMember = dataBase->GetMemberList()[dataBase->GetLogInIndex()];
+	return loginMember->GetRecruitmentList();
 }

@@ -10,7 +10,14 @@
 #include "LogoutUI.h"
 #include "AddRecruitment.h"
 #include "AddRecruitmentUI.h"
-
+#include "SearchCompanyRecruitments.h"
+#include "SearchCompanyRecruitmentsUI.h"
+#include "ApplyRecruitment.h"
+#include "ApplyRecruitmentUI.h"
+#include "SearchRecruitments.h"
+#include "SearchRecruitmentsUI.h"
+#include "SearchRecruitment.h"
+#include "SearchRecruitmentUI.h"
 
 
 void doTask();
@@ -85,11 +92,13 @@ void doTask()
 				case 1:
 				{
 					AddRecruitment* addRecruitment = new AddRecruitment(dataBase);
-					addRecruitment->GetAddRecruitmentUI()->GetRecruitmentForm(addRecruitment, file);
+					addRecruitment->GetAddRecruitmentUI()->createNewRecruitment(addRecruitment, file);
 					break;
 				}
 				case 2:
 				{
+					SearchCompanyRecruitments* searchCompanyRecruitments = new SearchCompanyRecruitments(dataBase);
+					searchCompanyRecruitments->GetSearchCompanyRecruitmentsUI()->SelectCompanyRecruitments(searchCompanyRecruitments, file);
 					break;
 				}
 				case 3:
@@ -104,17 +113,25 @@ void doTask()
 			switch (menu_level_2)
 			{
 				case 1:
-				{
-					break;
-				}
-				case 2:
-				{
-					break;
-				}
-				case 3:
-				{
-					break;
-				}
+			{
+				SearchRecruitment* searchRecruitment = new SearchRecruitment(dataBase);
+				searchRecruitment->getSearchRecruitmentUI()->selectRecruitment(searchRecruitment, file);
+
+				break;
+			}
+			case 2:
+			{
+				ApplyRecruitment* applyRecruitment = new ApplyRecruitment(dataBase);
+				applyRecruitment->getApplyRecruitmentUI()->callSelectRecruitment(applyRecruitment, file);
+				break;
+			}
+			case 3:
+			{
+				SearchRecruitments* searchRecruitments = new SearchRecruitments(dataBase);
+				searchRecruitments->getSearchRecruitmentsUI()->selectRecruitments(searchRecruitments, file);
+
+				break;
+			}
 				case 4:
 				{
 					break;

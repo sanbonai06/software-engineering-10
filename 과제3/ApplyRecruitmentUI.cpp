@@ -17,6 +17,6 @@ void ApplyRecruitmentUI::callSelectRecruitment(ApplyRecruitment* applyRecruitmen
 
 	Recruitment* recruitment = applyRecruitment->applyRecruitment(businessNumber);
 
-	file->ofs << "4.2 Ã¤¿ë Áö¿ø" << "\n";
-	file->ofs << "> " << recruitment->GetCompanyName() << " " << recruitment->BusinessNumber() << " " << recruitment->GetTask() << "\n";
+	file->ofs << "4.2 ì±„ìš© ì§€ì›" << "\n";
+	file->ofs << "> " << recruitment->GetCompanyName() << " " << recruitment->BusinessNumber() << " " << recruitment->GetTask() << "\n\n";
 }
