@@ -1,4 +1,5 @@
 #include "Member.h"
+#include "ApplyInfo.h"
 
 Member::Member()
 {

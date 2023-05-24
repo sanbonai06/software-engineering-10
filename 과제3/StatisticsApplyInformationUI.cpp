@@ -1,30 +1,32 @@
-//#include "StatisticsApplyInformationUI.h"
-//#include "StatisticsApplyInformation.h"
-//#include "File.h"
-//#include "Recruitment.h"
-//#include <vector>
-//
-//StatisticsApplyInformationUI::StatisticsApplyInformationUI()
-//{
-//
-//}
-//
-//void StatisticsApplyInformationUI::StartInterface()
-//{
-//	// GUI°æ¿ì PopUpÃ¢ »ý¼º, ÀÌ¹ø °úÁ¦¿¡¼­´Â ÆÄÀÏ ÀÔÃâ·ÂÀÌ±â ¶§¹®¿¡ ¾Æ¹«·± ±â´ÉÀ» ÇÏÁö ¾ÊÀ½.
-//}
-//
-//void StatisticsApplyInformationUI::SelectStatisticsApplyInformation(StatisticsApplyInformation* statisticsApplyInformation, File* file)
-//{
-//	std::vector<Recruitment*> data = statisticsApplyInformation->ShowMemberRecruitment();
-//
-//	file->ofs << "5.1. Áö¿ø Á¤º¸ Åë°è" << '\n';
-//	for (Recruitment* recuitment : data)
-//	{
-//		if (recruitment->GetTotalSales() > 0)
-//		{
-//			file->ofs << "> " << recruitment->GetRecruitName() << " " << recruitment->GetPrice() * recruitment->GetTotalSales() << " " << floor(recruitment->GetAverageSatisfaction() + 0.5) << '\n';
-//		}
-//	}
-//	file->ofs << '\n';
-//}
+ï»¿#include "StatisticsApplyInformationUI.h"
+#include "StatisticsApplyInformation.h"
+#include "File.h"
+#include "Recruitment.h"
+#include <vector>
+#include <map>
+#include <string>
+
+StatisticsApplyInformationUI::StatisticsApplyInformationUI()
+{
+
+}
+
+void StatisticsApplyInformationUI::StartInterface()
+{
+
+}
+
+void StatisticsApplyInformationUI::SelectStatisticsApplyInformation(StatisticsApplyInformation* statisticsApplyInformation, File* file)
+{
+	std::map<std::string, int> taskCountMap;
+	statisticsApplyInformation->ShowStaticsApplyInformation(taskCountMap);
+
+	file->ofs << "5.1. ì§€ì› ì •ë³´ í†µê³„" << '\n';
+	for (const auto& pair : taskCountMap) {
+		file->ofs << "> " << pair.first << " " << pair.second << '\n';
+		std::cout << "> " << pair.first << " " << pair.second << '\n';
+	}
+	file->ofs << '\n';
+	std::cout << '\n';
+    
+}

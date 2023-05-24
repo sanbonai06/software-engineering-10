@@ -19,7 +19,8 @@
 #include "SearchRecruitment.h"
 #include "SearchRecruitmentUI.h"
 #include "ApplyInfo.h"
-
+#include "StatisticsApplyInformation.h"
+#include "SearchCompanyRecruitmentsUI.h"
 
 
 void doTask();
@@ -147,8 +148,8 @@ void doTask()
 			{
 				case 1:
 				{
-					//StatisticsApplyInformation* statisticsApplyInformation = new StatisticsApplyInformation(dataBase);
-					//statisticsApplyInformation->GetStatisticsApplyInformationUI()->SelectStatisticsApplyInformation(statisticsApplyInformation, file);
+					StatisticsApplyInformation* statisticsApplyInformation = new StatisticsApplyInformation(dataBase);
+					statisticsApplyInformation->GetStatisticsApplyInformationUI()->SelectStatisticsApplyInformation(statisticsApplyInformation, file);
 					break;
 				}
 			}

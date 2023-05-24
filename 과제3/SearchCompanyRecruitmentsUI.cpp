@@ -11,18 +11,18 @@ SearchCompanyRecruitmentsUI::SearchCompanyRecruitmentsUI()
 
 void SearchCompanyRecruitmentsUI::StartInterface()
 {
-	// GUIï¿½ï¿½ï¿½ PopUpÃ¢ ï¿½ï¿½ï¿½ï¿½, ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Æ¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
+	// GUI°æ¿ì PopUpÃ¢ »ý¼º, ÀÌ¹ø °úÁ¦¿¡¼­´Â ÆÄÀÏ ÀÔÃâ·ÂÀÌ±â ¶§¹®¿¡ ¾Æ¹«·± ±â´ÉÀ» ÇÏÁö ¾ÊÀ½.
 }
 
 void SearchCompanyRecruitmentsUI::SelectCompanyRecruitments(SearchCompanyRecruitments* searchCompanyRecruitments, File* file)
 {
 	std::vector<Recruitment*> data = searchCompanyRecruitments->ShowCompanyRecruitments();
 
-	file->ofs << "3.2. ï¿½ï¿½Ïµï¿½ Ã¤ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸" << '\n';
-	for (Recruitment* recruitment : data)
+	file->ofs << "3.2. µî·ÏµÈ Ã¤¿ë Á¤º¸ Á¶È¸" << '\n';
+	for (Recruitment* Recruitment : data)
 	{
-			file->ofs << "> " << recruitment->GetTask() << " " << recruitment->GetRecruitmentNumber() << " " << recruitment->GetDeadline() << '\n';
-			std::cout << "> " << recruitment->GetTask() << " " << recruitment->GetRecruitmentNumber() << " " << recruitment->GetDeadline() << '\n';
+			file->ofs << "> " << Recruitment->GetTask() << " " << Recruitment->GetRecruitmentNumber() << " " << Recruitment->GetDeadline() << '\n';
+			std::cout << "> " << Recruitment->GetTask() << " " << Recruitment->GetRecruitmentNumber() << " " << Recruitment->GetDeadline() << '\n';
 	}
 	file->ofs << '\n';
 	std::cout << '\n';

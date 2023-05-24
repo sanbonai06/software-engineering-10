@@ -1,4 +1,4 @@
-#include "SearchRecruitmentsUI.h"
+﻿#include "SearchRecruitmentsUI.h"
 #include "SearchRecruitments.h"
 #include "File.h"
 #include "ApplyInfo.h"

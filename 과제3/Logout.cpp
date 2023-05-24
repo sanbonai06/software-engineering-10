@@ -16,14 +16,11 @@ Logout::Logout(DataBase* dataBase) {
     logoutUI->startInterface();
 }
 
-std::string Logout::TryLogout(string id)
+std::string Logout::TryLogout()
 {
     int index = this->dataBase->GetLogInIndex();
     std::vector<Member*> memberList = (this->dataBase)->GetMemberList();
-    for(int i=0; i<memberList.size(); i++) {
-        if (memberList[i]->checkId(id)) {
-            this->dataBase->setLogInIndex(-1);
-            return memberList[i]->getID();
-        }
-    }
+    string id = memberList[index]->getID();
+    this->dataBase->setLogInIndex(-1);
+    return id;
 }

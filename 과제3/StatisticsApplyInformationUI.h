@@ -9,5 +9,5 @@ public:
 	StatisticsApplyInformationUI();
 
 	void StartInterface();
-	void StatisticsApplyInformation(StatisticsApplyInformation* statisticsApplyInformation, File* file);
+	void SelectStatisticsApplyInformation(StatisticsApplyInformation* statisticsApplyInformation, File* file);
 };

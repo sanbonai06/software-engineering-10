@@ -31,7 +31,7 @@ bool JoinMember::AddNewMember(std::string user_type, std::string name, std::stri
 
 	Member* member = new Member(user_type, name, ssn, id, password);
 	dataBase->AddMember(member);
-	std::cout << "����� �߰��Ǿ���. user_type : " << user_type << ", name : " << name << ", ssn :" << ssn << ", id : " << id << ", password : " << password << "\n";
+	std::cout << "회원 가입. user_type : " << user_type << ", name : " << name << ", ssn :" << ssn << ", id : " << id << ", password : " << password << "\n";
 	return true;
 
 

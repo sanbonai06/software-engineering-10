@@ -1,4 +1,4 @@
-#include "LogoutUI.h"
+﻿#include "LogoutUI.h"
 #include "Logout.h"
 #include "Member.h"
 #include "File.h"
@@ -14,12 +14,8 @@ void LogoutUI::startInterface()
 
 void LogoutUI::selectLogout(Logout* logout, File* file)
 {
-    string id;
-    file->ifs.seekg(file->readed);
-	file->ifs >> id;
-	file->readed = file->ifs.tellg();
-    string result = logout->TryLogout(id);
-    cout<<result<<"\n";
-    file->ofs << "2.2. �α׾ƿ�" << '\n';
+    
+    string result = logout->TryLogout();
+    file->ofs << "2.2. 로그아웃" << '\n';
     file->ofs << "> " << result << " " << "\n" << "\n";
 }

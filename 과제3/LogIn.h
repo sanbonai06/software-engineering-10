@@ -1,7 +1,8 @@
 #pragma once
 
-#include<cstring>
 #include "DataBase.h"
+#include <string>
+using namespace std;
 
 class Member;
 class LogInUI;

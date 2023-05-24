@@ -14,7 +14,7 @@ public:
 
 	LogoutUI* getLogoutUI() { return logoutUI; }
 
-	string TryLogout(string id);
+	string TryLogout();
 private:
 	DataBase* dataBase;
 	LogoutUI* logoutUI;

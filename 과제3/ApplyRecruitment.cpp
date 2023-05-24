@@ -4,6 +4,7 @@
 #include "Recruitment.h"
 #include "Member.h"
 #include "DataBase.h"
+#include "ApplyInfo.h"
 
 using namespace std;
 

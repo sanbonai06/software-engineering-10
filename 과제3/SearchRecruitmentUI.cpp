@@ -1,8 +1,9 @@
-#include "SearchRecruitment.h"
+﻿#include "SearchRecruitment.h"
 #include "SearchRecruitmentUI.h"
 #include "Recruitment.h"
 #include "File.h"
 #include <vector>
+#include <string>
 
 using namespace std;
 

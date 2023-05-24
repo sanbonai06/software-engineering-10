@@ -1,6 +1,6 @@
 #pragma once
 #include <vector>
-#include <cstring>
+#include <string>
 using namespace std;
 
 class Member;
@@ -18,7 +18,7 @@ public:
 
 	void DeleteMember(int index) { memberList.erase(memberList.begin() + index); }
 
-	void AddMember(Member* member) { memberList.push_back(member); }// For Test
+	void AddMember(Member* member) { memberList.emplace_back(member); }// For Test
 
 
 private:

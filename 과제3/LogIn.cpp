@@ -3,7 +3,8 @@
 #include "Member.h"
 #include "LogInUI.h"
 #include <iostream>
-#include<vector>
+#include <vector>
+#include <string>
 using namespace std;
 
 LogIn::LogIn(DataBase* db) {
@@ -12,10 +13,10 @@ LogIn::LogIn(DataBase* db) {
 
 Member* LogIn::checkMemberInfo(string id, string password) {
     
-    vector<Member*> newMemberList = this->db->GetMemberList();
+    vector<Member*> newMemberList = db->GetMemberList();
     for(int i=0; i<newMemberList.size(); i++) {
         if(newMemberList[i]->checkIdAndPassword(id, password)) {
-			this->db->setLogInIndex(i);
+			db->setLogInIndex(i);
             return newMemberList[i];
         }
     }

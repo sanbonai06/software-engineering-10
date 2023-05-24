@@ -1,4 +1,4 @@
-#include "JoinMemberUI.h"
+﻿#include "JoinMemberUI.h"
 #include "JoinMember.h"
 #include "Member.h"
 #include "File.h"
@@ -27,20 +27,20 @@ void JoinMemberUI::SelectJoinMember(JoinMember* joinMember, File* file)
 	file->readed = file->ifs.tellg();
 
 	if (joinMember->AddNewMember(user_type, name, SSN, id, password)) {
-		file->ofs << "1.1. ???????" << '\n';
+		file->ofs << "1.1. 회원가입" << '\n';
 
-		std::cout << "1.1. ???????" << "\n";
+		std::cout << "1.1. 회원가입" << "\n";
 
 		file->ofs << "> " << user_type << " " << name << " " << SSN << " " << id << " " << password << " " << '\n' << '\n';
 	}
 	else {
-		file->ofs << "1.1. ???????" << '\n';
+		file->ofs << "1.1. 회원가입" << '\n';
 
-		std::cout << "1.1. ???????" << "\n";
+		std::cout << "1.1. 회원가입" << "\n";
 
-		file->ofs << "> ??????? ????" << '\n' << '\n';
+		file->ofs << "> 깨져서 뭔지 모름" << '\n' << '\n';
 
-		std::cout << "> ??????? ????" << "\n";
+		std::cout << "> 깨져서 뭔지 모름" << "\n";
 	}
 }
 
@@ -49,7 +49,7 @@ void join()
 {
 	char user_type[MAX_STRING], name[MAX_STRING], SSN [[MAX_STRING], address[MAX_STRING], ID[MAX_STRING], password[MAX_STRING];
 
-	// ??? ???? : ???, ??��??, ID, Password?? ????��??? ????
+	// ??? ???? : ???, ??ι??, ID, Password?? ????κ??? ????
 	fscanf(in_fp, "%s %s %s %s", name, SSN, ID, password);
 
 

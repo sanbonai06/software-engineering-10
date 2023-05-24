@@ -1,4 +1,4 @@
-#include "ApplyRecruitmentUI.h"
+﻿#include "ApplyRecruitmentUI.h"
 #include "ApplyRecruitment.h"
 #include "File.h"
 #include "ApplyInfo.h"
@@ -17,7 +17,7 @@ void ApplyRecruitmentUI::callSelectApply(ApplyRecruitment* applyRecruitment, Fil
 
 	ApplyInfo* applyInfo = applyRecruitment->addApplyRecruitment(businessNumber);
 
-	file->ofs << "4.2 채용 지원" << "\n";
-	file->ofs << "> " << applyInfo->getCompanyName() << " " << applyInfo->getBusinessNumber() << " " << applyInfo->getTask() << "\n\n";
+	file->ofs << "4.2 채용 지원" << '\n';
+	file->ofs << "> " << applyInfo->getCompanyName() << " " << applyInfo->getBusinessNumber() << " " << applyInfo->getTask() << '\n' << '\n';
 	//applyInfo->GetCompanyName() << " " << recruitment->BusinessNumber() << " " << recruitment->GetTask() << "\n\n";
 }

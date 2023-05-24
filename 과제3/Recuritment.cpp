@@ -18,4 +18,5 @@ Recruitment::Recruitment(std::string task, std::string recruitmentNumber, std::s
 	this->deadline = deadline;
 	this->companyName = name;
 	this->businessNumber = ssn;
+	this->applyNumber = 0;
 }
