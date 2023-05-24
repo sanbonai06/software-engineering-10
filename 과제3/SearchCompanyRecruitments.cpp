@@ -25,5 +25,4 @@ std::vector<Recruitment*> SearchCompanyRecruitments::ShowCompanyRecruitments()
 	CompanyMember* member = dynamic_cast<CompanyMember*>(findMember);
 	if(std::stoi(member->getType()) == 1)
 		return member->getRecruitmentList();
-	return NULL;
 }

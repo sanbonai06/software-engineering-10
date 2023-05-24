@@ -5,6 +5,7 @@ using namespace std;
 class DataBase;
 class CancelApplyInfoUI;
 class ApplyInfo;
+
 class CancelApplyInfo {
     private:
         DataBase* dataBase;
@@ -18,5 +19,5 @@ class CancelApplyInfo {
 
         CancelApplyInfoUI* getCancelApplyInfoUI() { return cancelApplyInfoUI; }
 
-        ApplyInfo* cancelApplyInfo(string ssn);
-}
+        ApplyInfo* cancelApplyInfo(string businessNumber);
+};

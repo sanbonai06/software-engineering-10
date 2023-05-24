@@ -14,3 +14,7 @@ ApplyInfo* GeneralMember::deleteApplyInfo(string businessNumber) {
     }
     return NULL;
 }
+
+void GeneralMember::createApply(ApplyInfo* applyInfo) {
+    this->listApplyInfos.push_back(applyInfo);
+}

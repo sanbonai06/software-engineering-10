@@ -36,7 +36,7 @@ ApplyInfo* ApplyRecruitment::addApplyRecruitment(string businessNumber)
 	{
 		if (companyMemberList[i]->getType() == "1")
 		{
-			CompanyMenber* companyMember = dynamic_cast<CompanyMember*>(companyMemberList[i]);
+			CompanyMember* companyMember = dynamic_cast<CompanyMember*>(companyMemberList[i]);
 			vector<Recruitment*> listOfRecruitments = companyMember->getRecruitmentList();
 
 			for (int j = 0; j < listOfRecruitments.size(); j++)

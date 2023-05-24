@@ -12,4 +12,4 @@ class CancelApplyInfoUI {
         void startInterface();
 
         void callAbortApplyInfo(CancelApplyInfo* cancelApplyInfo, File* file);
-}
+};

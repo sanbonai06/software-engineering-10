@@ -4,7 +4,6 @@
 Member::Member()
 {
 	id = 1;// For Test
-	listOfRecruitments.clear();
 }
 
 Member::Member(std::string user_type, std::string name, std::string ssn, std::string id, std::string password)
@@ -14,16 +13,6 @@ Member::Member(std::string user_type, std::string name, std::string ssn, std::st
 	this->ssn = ssn;
 	this->id = id;
 	this->password = password;
-}
-
-void Member::CreateRecruitment(Recruitment* newRecruitment)
-{
-	listOfRecruitments.push_back(newRecruitment);
-}
-
-void Member::createApply(ApplyInfo* newApplyInfo)
-{
-	listApplyInfos.push_back(newApplyInfo);
 }
 
 bool Member::checkIdAndPassword(string id, string password) {

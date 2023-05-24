@@ -15,4 +15,6 @@ class GeneralMember : public Member {
         GeneralMember(string user_type, string name, string ssn, string id, string password) : Member(user_type, name, ssn, id, password) {}
         vector<ApplyInfo*> getApplyInfoList() { return listOfApplyInfos; }
         ApplyInfo* deleteApplyInfo(string businessNumber);
+
+        void createApply(ApplyInfo* applyInfo);
 };

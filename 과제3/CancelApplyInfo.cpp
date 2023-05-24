@@ -3,6 +3,7 @@
 #include "Member.h"
 #include "GeneralMember.h"
 #include <vector>
+#include <cstring>
 using namespace std;
 
 
