@@ -15,20 +15,20 @@ StatisticsApplyInformation::StatisticsApplyInformation()
 {
 	this->dataBase = nullptr;
 	statisticsApplyInformationUI = new StatisticsApplyInformationUI();
-	statisticsApplyInformationUI->StartInterface();
+	statisticsApplyInformationUI->startInterface();
 }
 
 StatisticsApplyInformation::StatisticsApplyInformation(DataBase* dataBase)
 {
 	this->dataBase = dataBase;
 	statisticsApplyInformationUI = new StatisticsApplyInformationUI();
-	statisticsApplyInformationUI->StartInterface();
+	statisticsApplyInformationUI->startInterface();
 }
 
 
-void StatisticsApplyInformation::ShowStaticsApplyInformation(map<string, int>& taskCountMap)
+void StatisticsApplyInformation::showStaticsApplyInformation(map<string, int>& taskCountMap)
 {
-	Member* member = dataBase->GetMemberList()[dataBase->GetLogInIndex()];
+	Member* member = dataBase->getMemberList()[dataBase->getLogInIndex()];
      string memberType (member->getType());
 
     // 회사 회원의 경우
@@ -37,13 +37,13 @@ void StatisticsApplyInformation::ShowStaticsApplyInformation(map<string, int>& t
         
         // 초기화. 더 나은 방법이 떠오르시면 고쳐주세요 :)
         for (int i = 0; i < taskList.size(); i++) {
-             string task = taskList[i]->GetTask();
+             string task = taskList[i]->getTask();
             taskCountMap[task] = 0;
         }
 
         for (int i = 0; i < taskList.size(); i++) {
-             string task = taskList[i]->GetTask();
-            taskCountMap[task] += taskList[i]->GetApplyNumber();
+             string task = taskList[i]->getTask();
+            taskCountMap[task] += taskList[i]->getApplyNumber();
         }
     }
     // 일반 회원의 경우

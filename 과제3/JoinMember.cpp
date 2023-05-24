@@ -11,21 +11,21 @@ JoinMember::JoinMember()
 {
 	this->dataBase = nullptr;
 	joinMemberUI = new JoinMemberUI();
-	joinMemberUI->StartInterface();
+	joinMemberUI->startInterface();
 }
 
 JoinMember::JoinMember(DataBase* dataBase)
 {
 	this->dataBase = dataBase;
 	joinMemberUI = new JoinMemberUI();
-	joinMemberUI->StartInterface();
+	joinMemberUI->startInterface();
 }
 
-bool JoinMember::AddNewMember(string user_type,  string name,  string ssn,  string id,  string password)
+bool JoinMember::addNewMember(string user_type,  string name,  string ssn,  string id,  string password)
 {
 	int i = 0;
 
-	vector<Member*> memberList = (this->dataBase)->GetMemberList();
+	vector<Member*> memberList = (this->dataBase)->getMemberList();
 
 	for (i = 0; i < memberList.size(); i++) {
 		if (memberList[i]->getID() == id) {
@@ -35,12 +35,12 @@ bool JoinMember::AddNewMember(string user_type,  string name,  string ssn,  stri
 
 	if (stoi(user_type) == 1) {
 		CompanyMember* member = new CompanyMember(user_type, name, ssn, id, password);
-		dataBase->AddMember(member);
+		dataBase->addMember(member);
 
 	} 
 	else {
 		GeneralMember* member = new GeneralMember(user_type, name, ssn, id, password);
-		dataBase->AddMember(member);
+		dataBase->addMember(member);
 
 	}
 	return true;

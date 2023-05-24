@@ -9,12 +9,12 @@ JoinMemberUI::JoinMemberUI()
 
 }
 
-void JoinMemberUI::StartInterface()
+void JoinMemberUI::startInterface()
 {
 	// GUI??? PopUp? ????, ??? ?????????? ???? ???????? ?????? ????? ????? ???? ????.
 }
 
-void JoinMemberUI::SelectJoinMember(JoinMember* joinMember, File* file)
+void JoinMemberUI::selectJoinMember(JoinMember* joinMember, File* file)
 {
 	// ???? ??? ???
 	string user_type = "";
@@ -27,7 +27,7 @@ void JoinMemberUI::SelectJoinMember(JoinMember* joinMember, File* file)
 	file->ifs >> user_type >> name >> SSN >> id >> password;
 	file->readed = file->ifs.tellg();
 
-	if (joinMember->AddNewMember(user_type, name, SSN, id, password)) {
+	if (joinMember->addNewMember(user_type, name, SSN, id, password)) {
 		file->ofs << "1.1. 회원가입" << '\n';
 
 

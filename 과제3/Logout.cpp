@@ -5,22 +5,24 @@
 #include <vector>
 using namespace std;
 
-Logout::Logout() {
+Logout::Logout()
+{
     this->dataBase = nullptr;
     logoutUI = new LogoutUI();
     logoutUI->startInterface();
 }
 
-Logout::Logout(DataBase* dataBase) {
+Logout::Logout(DataBase *dataBase)
+{
     this->dataBase = dataBase;
     logoutUI = new LogoutUI();
     logoutUI->startInterface();
 }
 
-string Logout::TryLogout()
+string Logout::tryLogout()
 {
-    int index = this->dataBase->GetLogInIndex();
-     vector<Member*> memberList = (this->dataBase)->GetMemberList();
+    int index = this->dataBase->getLogInIndex();
+    vector<Member *> memberList = (this->dataBase)->getMemberList();
     string id = memberList[index]->getID();
     this->dataBase->setLogInIndex(-1);
     return id;

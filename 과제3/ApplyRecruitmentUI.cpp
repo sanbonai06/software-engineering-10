@@ -18,5 +18,5 @@ void ApplyRecruitmentUI::callSelectApply(ApplyRecruitment* applyRecruitment, Fil
 	ApplyInfo* applyInfo = applyRecruitment->addApplyRecruitment(businessNumber);
 
 	file->ofs << "4.2 채용 지원" << '\n';
-	file->ofs << "> " << applyInfo->getCompanyName() << " " << applyInfo->getBusinessNumber() << " " << applyInfo->getTask() << '\n' << '\n';
+	file->ofs << "> " << applyInfo->getCompanyName() << " " << applyInfo->getbusinessNumber() << " " << applyInfo->getTask() << '\n' << '\n';
 }

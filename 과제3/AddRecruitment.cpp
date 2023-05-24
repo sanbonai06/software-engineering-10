@@ -10,26 +10,26 @@ AddRecruitment::AddRecruitment()
 {
 	this->dataBase = nullptr;
 	addRecruitmentUI = new AddRecruitmentUI();
-	addRecruitmentUI->StartInterface();
+	addRecruitmentUI->startInterface();
 }
 
-AddRecruitment::AddRecruitment(DataBase* dataBase)
+AddRecruitment::AddRecruitment(DataBase *dataBase)
 {
 	this->dataBase = dataBase;
 	addRecruitmentUI = new AddRecruitmentUI();
-	addRecruitmentUI->StartInterface();
+	addRecruitmentUI->startInterface();
 }
 
-
-void AddRecruitment::AddNewRecruitment(string task, string recruitmentNumber, string deadline)
+void AddRecruitment::addNewRecruitment(string task, string recruitmentNumber, string deadline)
 {
-	Member* findMember = dataBase->GetMemberList()[dataBase->GetLogInIndex()];
-	CompanyMember* member = dynamic_cast<CompanyMember*>(findMember);
-	if (stoi(member->getType()) == 1) {
+	Member *findMember = dataBase->getMemberList()[dataBase->getLogInIndex()];
+	CompanyMember *member = dynamic_cast<CompanyMember *>(findMember);
+	if (stoi(member->getType()) == 1)
+	{
 		string name = member->getName();
 		string ssn = member->getSSN();
-		Recruitment* newRecruitment = new Recruitment(task, recruitmentNumber, deadline, name, ssn);
-		newRecruitment->SetMemberID(dataBase->GetMemberList()[dataBase->GetLogInIndex()]->getID());
+		Recruitment *newRecruitment = new Recruitment(task, recruitmentNumber, deadline, name, ssn);
+		newRecruitment->setMemberID(dataBase->getMemberList()[dataBase->getLogInIndex()]->getID());
 		member->createRecruitment(newRecruitment);
 	}
 }

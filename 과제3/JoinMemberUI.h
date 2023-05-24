@@ -9,9 +9,9 @@ class JoinMemberUI
 public:
 	JoinMemberUI();
 
-	void StartInterface();
-	void SelectJoinMember(JoinMember* joinmember, File* file);
+	void startInterface();
+	void selectJoinMember(JoinMember *joinmember, File *file);
 
 private:
-	JoinMember* joinMember;
+	JoinMember *joinMember;
 };

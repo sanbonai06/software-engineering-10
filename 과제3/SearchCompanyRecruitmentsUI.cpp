@@ -10,19 +10,19 @@ SearchCompanyRecruitmentsUI::SearchCompanyRecruitmentsUI()
 
 }
 
-void SearchCompanyRecruitmentsUI::StartInterface()
+void SearchCompanyRecruitmentsUI::startInterface()
 {
 	// GUI��� PopUpâ ����, �̹� ���������� ���� ������̱� ������ �ƹ��� ����� ���� ����.
 }
 
-void SearchCompanyRecruitmentsUI::SelectCompanyRecruitments(SearchCompanyRecruitments* searchCompanyRecruitments, File* file)
+void SearchCompanyRecruitmentsUI::selectCompanyRecruitments(SearchCompanyRecruitments* searchCompanyRecruitments, File* file)
 {
-	vector<Recruitment*> data = searchCompanyRecruitments->ShowCompanyRecruitments();
+	vector<Recruitment*> data = searchCompanyRecruitments->showCompanyRecruitments();
 
 	file->ofs << "3.2. ��ϵ� ä�� ���� ��ȸ" << '\n';
 	for (Recruitment* recruitment : data)
 	{
-			file->ofs << "> " << recruitment->GetTask() << " " << recruitment->GetRecruitmentNumber() << " " << recruitment->GetDeadline() << '\n';
+			file->ofs << "> " << recruitment->getTask() << " " << recruitment->getRecruitmentNumber() << " " << recruitment->getDeadline() << '\n';
 	}
 	file->ofs << '\n';
 }

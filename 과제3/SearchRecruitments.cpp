@@ -21,7 +21,7 @@ SearchRecruitments::SearchRecruitments(DataBase* dataBase)
 
 vector<ApplyInfo*> SearchRecruitments::showSearchedRecruitments()
 {
-	Member* findMember = dataBase->GetMemberList()[dataBase->GetLogInIndex()];
+	Member* findMember = dataBase->getMemberList()[dataBase->getLogInIndex()];
 	GeneralMember* loginMember = dynamic_cast<GeneralMember*>(findMember);
 	if(stoi(loginMember->getType()) == 2) 
 		return loginMember->getApplyInfoList();

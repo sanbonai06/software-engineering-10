@@ -9,13 +9,13 @@ class AddRecruitment
 {
 public:
 	AddRecruitment();
-	AddRecruitment(DataBase* dataBase);
+	AddRecruitment(DataBase *dataBase);
 
-	AddRecruitmentUI* GetAddRecruitmentUI() { return addRecruitmentUI; }
+	AddRecruitmentUI *getAddRecruitmentUI() { return addRecruitmentUI; }
 
-	void AddNewRecruitment(string task, string recruitmentNumber, string deadline);
+	void addNewRecruitment(string task, string recruitmentNumber, string deadline);
 
 private:
-	DataBase* dataBase;
-	AddRecruitmentUI* addRecruitmentUI;
+	DataBase *dataBase;
+	AddRecruitmentUI *addRecruitmentUI;
 };

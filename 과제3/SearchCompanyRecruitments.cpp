@@ -10,19 +10,19 @@ SearchCompanyRecruitments::SearchCompanyRecruitments()
 {
 	this->dataBase = nullptr;
 	SearchCompanyRecruitmentsUI* searchCompanyRecruitmentsUI = new SearchCompanyRecruitmentsUI();
-	searchCompanyRecruitmentsUI->StartInterface();
+	searchCompanyRecruitmentsUI->startInterface();
 }
 
 SearchCompanyRecruitments::SearchCompanyRecruitments(DataBase* dataBase)
 {
 	this->dataBase = dataBase;
 	SearchCompanyRecruitmentsUI* searchCompanyRecruitmentsUI = new SearchCompanyRecruitmentsUI();
-	searchCompanyRecruitmentsUI->StartInterface();
+	searchCompanyRecruitmentsUI->startInterface();
 }
 
-vector<Recruitment*> SearchCompanyRecruitments::ShowCompanyRecruitments()
+vector<Recruitment*> SearchCompanyRecruitments::showCompanyRecruitments()
 {
-	Member* findMember = dataBase->GetMemberList()[dataBase->GetLogInIndex()];
+	Member* findMember = dataBase->getMemberList()[dataBase->getLogInIndex()];
 	CompanyMember* member = dynamic_cast<CompanyMember*>(findMember);
 	if(stoi(member->getType()) == 1)
 		return member->getRecruitmentList();

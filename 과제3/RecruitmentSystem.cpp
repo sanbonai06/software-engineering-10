@@ -29,9 +29,8 @@
 #include "Recruitment.h"
 using namespace std;
 
-
 void doTask();
-void program_exit(File* file);
+void program_exit(File *file);
 
 int main()
 {
@@ -41,13 +40,13 @@ int main()
 
 void doTask()
 {
-	File* file = new File();
-	DataBase* dataBase = new DataBase();
+	File *file = new File();
+	DataBase *dataBase = new DataBase();
 
-	dataBase->setLogInIndex(0);// For Test
+	dataBase->setLogInIndex(0); // For Test
 
-
-	int menu_level_1 = 0, menu_level_2 = 0; int is_program_exit = 0;
+	int menu_level_1 = 0, menu_level_2 = 0;
+	int is_program_exit = 0;
 	while (!is_program_exit)
 	{
 		file->ifs >> menu_level_1 >> menu_level_2;
@@ -59,18 +58,18 @@ void doTask()
 		{
 			switch (menu_level_2)
 			{
-				case 1:
-				{
-					JoinMember* joinMember = new JoinMember(dataBase);
-					joinMember->GetJoinMemberUI()->SelectJoinMember(joinMember, file);
-					break;
-				}
-				case 2:
-				{
-					ExitMember* exitMember = new ExitMember(dataBase);
-					exitMember->GetExitMemberUI()->SelectExitMember(exitMember, file);
-					break;
-				}
+			case 1:
+			{
+				JoinMember *joinMember = new JoinMember(dataBase);
+				joinMember->getJoinMemberUI()->selectJoinMember(joinMember, file);
+				break;
+			}
+			case 2:
+			{
+				ExitMember *exitMember = new ExitMember(dataBase);
+				exitMember->getExitMemberUI()->selectExitMember(exitMember, file);
+				break;
+			}
 			}
 			break;
 		}
@@ -78,18 +77,18 @@ void doTask()
 		{
 			switch (menu_level_2)
 			{
-				case 1:
-				{
-					LogIn* logIn = new LogIn(dataBase);
-					logIn->getLogInUI()->inputIdPw(logIn, file);
-					break;
-				}
-				case 2:
-				{
-					Logout* logout = new Logout(dataBase);
-					logout->getLogoutUI()->selectLogout(logout, file);
-					break;
-				}
+			case 1:
+			{
+				LogIn *logIn = new LogIn(dataBase);
+				logIn->getLogInUI()->inputIdPw(logIn, file);
+				break;
+			}
+			case 2:
+			{
+				Logout *logout = new Logout(dataBase);
+				logout->getLogoutUI()->selectLogout(logout, file);
+				break;
+			}
 			}
 			break;
 		}
@@ -97,22 +96,22 @@ void doTask()
 		{
 			switch (menu_level_2)
 			{
-				case 1:
-				{
-					AddRecruitment* addRecruitment = new AddRecruitment(dataBase);
-					addRecruitment->GetAddRecruitmentUI()->createNewRecruitment(addRecruitment, file);
-					break;
-				}
-				case 2:
-				{
-					SearchCompanyRecruitments* searchCompanyRecruitments = new SearchCompanyRecruitments(dataBase);
-					searchCompanyRecruitments->GetSearchCompanyRecruitmentsUI()->SelectCompanyRecruitments(searchCompanyRecruitments, file);
-					break;
-				}
-				case 3:
-				{
-					break;
-				}
+			case 1:
+			{
+				AddRecruitment *addRecruitment = new AddRecruitment(dataBase);
+				addRecruitment->getAddRecruitmentUI()->createNewRecruitment(addRecruitment, file);
+				break;
+			}
+			case 2:
+			{
+				SearchCompanyRecruitments *searchCompanyRecruitments = new SearchCompanyRecruitments(dataBase);
+				searchCompanyRecruitments->getSearchCompanyRecruitmentsUI()->selectCompanyRecruitments(searchCompanyRecruitments, file);
+				break;
+			}
+			case 3:
+			{
+				break;
+			}
 			}
 			break;
 		}
@@ -120,33 +119,33 @@ void doTask()
 		{
 			switch (menu_level_2)
 			{
-				case 1:
+			case 1:
 			{
-				SearchRecruitment* searchRecruitment = new SearchRecruitment(dataBase);
+				SearchRecruitment *searchRecruitment = new SearchRecruitment(dataBase);
 				searchRecruitment->getSearchRecruitmentUI()->selectRecruitment(searchRecruitment, file);
 
 				break;
 			}
 			case 2:
 			{
-				ApplyRecruitment* applyRecruitment = new ApplyRecruitment(dataBase);
+				ApplyRecruitment *applyRecruitment = new ApplyRecruitment(dataBase);
 				applyRecruitment->getApplyRecruitmentUI()->callSelectApply(applyRecruitment, file);
 				break;
 			}
 			case 3:
 			{
-				SearchRecruitments* searchRecruitments = new SearchRecruitments(dataBase);
+				SearchRecruitments *searchRecruitments = new SearchRecruitments(dataBase);
 				searchRecruitments->getSearchRecruitmentsUI()->selectRecruitments(searchRecruitments, file);
 
 				break;
 			}
-				case 4:
-				{
-					CancelApplyInfo* cancelApplyInfo = new CancelApplyInfo(dataBase);
-					cancelApplyInfo->getCancelApplyInfoUI()->callAbortApplyInfo(cancelApplyInfo, file);
-					
-					break;
-				}
+			case 4:
+			{
+				CancelApplyInfo *cancelApplyInfo = new CancelApplyInfo(dataBase);
+				cancelApplyInfo->getCancelApplyInfoUI()->callAbortApplyInfo(cancelApplyInfo, file);
+
+				break;
+			}
 			}
 			break;
 		}
@@ -154,12 +153,12 @@ void doTask()
 		{
 			switch (menu_level_2)
 			{
-				case 1:
-				{
-					StatisticsApplyInformation* statisticsApplyInformation = new StatisticsApplyInformation(dataBase);
-					statisticsApplyInformation->GetStatisticsApplyInformationUI()->SelectStatisticsApplyInformation(statisticsApplyInformation, file);
-					break;
-				}
+			case 1:
+			{
+				StatisticsApplyInformation *statisticsApplyInformation = new StatisticsApplyInformation(dataBase);
+				statisticsApplyInformation->getStatisticsApplyInformationUI()->selectStatisticsApplyInformation(statisticsApplyInformation, file);
+				break;
+			}
 			}
 			break;
 		}
@@ -167,13 +166,13 @@ void doTask()
 		{
 			switch (menu_level_2)
 			{
-				case 1:
-				{
-					program_exit(file);
-					is_program_exit = 1;
-					exit(1);
-					break;
-				}
+			case 1:
+			{
+				program_exit(file);
+				is_program_exit = 1;
+				exit(1);
+				break;
+			}
 			}
 			break;
 		}
@@ -182,11 +181,9 @@ void doTask()
 	return;
 }
 
-
-
-void program_exit(File* file)
+void program_exit(File *file)
 {
-    file->ofs << "6.1. " << '\n';
-    file->ifs.close();
-    file->ofs.close();
+	file->ofs << "6.1. " << '\n';
+	file->ifs.close();
+	file->ofs.close();
 }

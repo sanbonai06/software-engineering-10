@@ -9,13 +9,13 @@ public:
 	ApplyInfo();
 	ApplyInfo(string task, int recruitmentNumber, string deadline, string name, string businessNumber);
 
-	void SetMemberID(string MemberID) { this->MemberID = MemberID; }
+	void setMemberID(string MemberID) { this->MemberID = MemberID; }
 
 	string getDeadline() { return deadline; }
 	string getTask() { return task; }
 	string getCompanyName() { return companyName; }
 	int getRecruitmentNumber() { return recruitmentNumber; }
-	string getBusinessNumber() { return businessNumber; }
+	string getbusinessNumber() { return businessNumber; }
 
 	void setRecruitmentNumber() { this->recruitmentNumber++; }
 
@@ -26,5 +26,4 @@ private:
 	string companyName;
 	string businessNumber;
 	int recruitmentNumber;
-
 };

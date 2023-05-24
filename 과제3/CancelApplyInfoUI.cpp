@@ -14,5 +14,5 @@ void CancelApplyInfoUI::callAbortApplyInfo(CancelApplyInfo* cancelApplyInfo, Fil
     ApplyInfo* deletedApplyInfo = cancelApplyInfo->cancelApplyInfo(ssn);
 
 	file->ofs << "4.4. 지원 취소" << '\n';
-	file->ofs << "> " << deletedApplyInfo->getCompanyName() << " " << deletedApplyInfo->getBusinessNumber() << " " << deletedApplyInfo->getTask() << '\n' << '\n';
+	file->ofs << "> " << deletedApplyInfo->getCompanyName() << " " << deletedApplyInfo->getbusinessNumber() << " " << deletedApplyInfo->getTask() << '\n' << '\n';
 }

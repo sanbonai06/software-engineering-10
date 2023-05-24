@@ -12,15 +12,15 @@ StatisticsApplyInformationUI::StatisticsApplyInformationUI()
 
 }
 
-void StatisticsApplyInformationUI::StartInterface()
+void StatisticsApplyInformationUI::startInterface()
 {
 
 }
 
-void StatisticsApplyInformationUI::SelectStatisticsApplyInformation(StatisticsApplyInformation* statisticsApplyInformation, File* file)
+void StatisticsApplyInformationUI::selectStatisticsApplyInformation(StatisticsApplyInformation* statisticsApplyInformation, File* file)
 {
 	map<string, int> taskCountMap;
-	statisticsApplyInformation->ShowStaticsApplyInformation(taskCountMap);
+	statisticsApplyInformation->showStaticsApplyInformation(taskCountMap);
 
 	file->ofs << "5.1. 지원 정보 통계" << '\n';
 	for (const auto& pair : taskCountMap) {

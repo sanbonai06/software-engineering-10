@@ -10,12 +10,13 @@ class Logout
 {
 public:
 	Logout();
-	Logout(DataBase* dataBase);
+	Logout(DataBase *dataBase);
 
-	LogoutUI* getLogoutUI() { return logoutUI; }
+	LogoutUI *getLogoutUI() { return logoutUI; }
 
-	string TryLogout();
+	string tryLogout();
+
 private:
-	DataBase* dataBase;
-	LogoutUI* logoutUI;
+	DataBase *dataBase;
+	LogoutUI *logoutUI;
 };

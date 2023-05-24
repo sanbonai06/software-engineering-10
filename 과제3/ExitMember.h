@@ -10,13 +10,13 @@ class ExitMember
 {
 public:
 	ExitMember();
-	ExitMember(DataBase* dataBase);
+	ExitMember(DataBase *dataBase);
 
-	ExitMemberUI* GetExitMemberUI() { return exitMemberUI; }
+	ExitMemberUI *getExitMemberUI() { return exitMemberUI; }
 
-	string TryExitMember();
+	string tryExitMember();
 
 private:
-	DataBase* dataBase;
-	ExitMemberUI* exitMemberUI;
+	DataBase *dataBase;
+	ExitMemberUI *exitMemberUI;
 };

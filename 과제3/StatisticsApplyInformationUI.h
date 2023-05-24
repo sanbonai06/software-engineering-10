@@ -8,6 +8,6 @@ class StatisticsApplyInformationUI
 public:
 	StatisticsApplyInformationUI();
 
-	void StartInterface();
-	void SelectStatisticsApplyInformation(StatisticsApplyInformation* statisticsApplyInformation, File* file);
+	void startInterface();
+	void selectStatisticsApplyInformation(StatisticsApplyInformation *statisticsApplyInformation, File *file);
 };

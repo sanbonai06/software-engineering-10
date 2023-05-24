@@ -13,13 +13,13 @@ class StatisticsApplyInformation
 {
 public:
 	StatisticsApplyInformation();
-	StatisticsApplyInformation(DataBase* dataBase);
+	StatisticsApplyInformation(DataBase *dataBase);
 
-	StatisticsApplyInformationUI* GetStatisticsApplyInformationUI() { return statisticsApplyInformationUI; }
+	StatisticsApplyInformationUI *getStatisticsApplyInformationUI() { return statisticsApplyInformationUI; }
 
-	void ShowStaticsApplyInformation(map<string, int>& taskCountMap);
+	void showStaticsApplyInformation(map<string, int> &taskCountMap);
 
 private:
-	DataBase* dataBase;
-	StatisticsApplyInformationUI* statisticsApplyInformationUI;
+	DataBase *dataBase;
+	StatisticsApplyInformationUI *statisticsApplyInformationUI;
 };

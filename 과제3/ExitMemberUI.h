@@ -9,13 +9,15 @@ class ExitMemberUI
 {
 public:
 	ExitMemberUI();
-	ExitMemberUI(DataBase* db) {
+	ExitMemberUI(DataBase *db)
+	{
 		this->dataBase = db;
 	}
 
-	void StartInterface();
-	void SelectExitMember(ExitMember* exitMember, File* file);
+	void startInterface();
+	void selectExitMember(ExitMember *exitMember, File *file);
+
 private:
-	ExitMember* exitMember;
-	DataBase* dataBase;
+	ExitMember *exitMember;
+	DataBase *dataBase;
 };

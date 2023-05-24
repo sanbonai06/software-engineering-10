@@ -10,19 +10,17 @@ class DataBase
 public:
 	DataBase();
 
-	vector<Member*> GetMemberList() { return memberList; }
+	vector<Member *> getMemberList() { return memberList; }
 
+	int getLogInIndex() { return logInIndex; }
+	void setLogInIndex(int index) { logInIndex = index; } // For Test
 
-	int GetLogInIndex() { return logInIndex; }
-	void setLogInIndex(int index) { logInIndex = index; }// For Test
+	void deleteMember(int index) { memberList.erase(memberList.begin() + index); }
 
-	void DeleteMember(int index) { memberList.erase(memberList.begin() + index); }
-
-	void AddMember(Member* member) { memberList.push_back(member); }// For Test
-
+	void addMember(Member *member) { memberList.push_back(member); } // For Test
 
 private:
-	vector<Member*> memberList;
+	vector<Member *> memberList;
 
 	int logInIndex;
 };

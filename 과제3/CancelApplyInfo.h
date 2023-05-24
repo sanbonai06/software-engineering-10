@@ -6,18 +6,20 @@ class DataBase;
 class CancelApplyInfoUI;
 class ApplyInfo;
 
-class CancelApplyInfo {
-    private:
-        DataBase* dataBase;
-        CancelApplyInfoUI* cancelApplyInfoUI;
+class CancelApplyInfo
+{
+private:
+    DataBase *dataBase;
+    CancelApplyInfoUI *cancelApplyInfoUI;
 
-    public:
-        CancelApplyInfo();
-        CancelApplyInfo(DataBase* dataBase) {
-            this->dataBase = dataBase;
-        }
+public:
+    CancelApplyInfo();
+    CancelApplyInfo(DataBase *dataBase)
+    {
+        this->dataBase = dataBase;
+    }
 
-        CancelApplyInfoUI* getCancelApplyInfoUI() { return cancelApplyInfoUI; }
+    CancelApplyInfoUI *getCancelApplyInfoUI() { return cancelApplyInfoUI; }
 
-        ApplyInfo* cancelApplyInfo(string businessNumber);
+    ApplyInfo *cancelApplyInfo(string businessNumber);
 };

@@ -21,7 +21,7 @@ SearchRecruitment::SearchRecruitment(DataBase* dataBase)
 
 vector<Recruitment*> SearchRecruitment::showSearchedRecruitment(string name)
 {
-	vector<Member*> memberList = this->dataBase->GetMemberList();
+	vector<Member*> memberList = this->dataBase->getMemberList();
 	vector<Recruitment*> result;
 
 	for (int i = 0; i < memberList.size(); i++)

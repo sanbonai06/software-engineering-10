@@ -1,7 +1,7 @@
 #include "ExitMember.h"
 #include "ExitMemberUI.h"
 #include "DataBase.h"
-//#include "Member.h"
+// #include "Member.h"
 
 using namespace std;
 
@@ -9,23 +9,22 @@ ExitMember::ExitMember()
 {
 	this->dataBase = nullptr;
 	exitMemberUI = new ExitMemberUI();
-	exitMemberUI->StartInterface();
+	exitMemberUI->startInterface();
 }
 
-ExitMember::ExitMember(DataBase* dataBase)
+ExitMember::ExitMember(DataBase *dataBase)
 {
 	this->dataBase = dataBase;
 	exitMemberUI = new ExitMemberUI();
-	exitMemberUI->StartInterface();
+	exitMemberUI->startInterface();
 }
 
-string ExitMember::TryExitMember()
+string ExitMember::tryExitMember()
 {
-	vector<Member*> memberList = (this->dataBase)->GetMemberList();
-	int loginIndex = this->dataBase->GetLogInIndex();
+	vector<Member *> memberList = (this->dataBase)->getMemberList();
+	int loginIndex = this->dataBase->getLogInIndex();
 	string returnId = memberList[loginIndex]->getID();
-	this->dataBase->DeleteMember(loginIndex);
+	this->dataBase->deleteMember(loginIndex);
 
 	return returnId;
-
 }

@@ -9,13 +9,13 @@ class JoinMember
 {
 public:
 	JoinMember();
-	JoinMember(DataBase* dataBase);
+	JoinMember(DataBase *dataBase);
 
-	JoinMemberUI* GetJoinMemberUI() { return joinMemberUI; }
+	JoinMemberUI *getJoinMemberUI() { return joinMemberUI; }
 
-	bool AddNewMember(string user_type,  string name,  string SSN,  string id,  string password);
+	bool addNewMember(string user_type, string name, string SSN, string id, string password);
 
 private:
-	DataBase* dataBase;
-	JoinMemberUI* joinMemberUI;
+	DataBase *dataBase;
+	JoinMemberUI *joinMemberUI;
 };

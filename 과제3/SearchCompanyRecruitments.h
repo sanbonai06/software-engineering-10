@@ -10,13 +10,13 @@ class SearchCompanyRecruitments
 {
 public:
 	SearchCompanyRecruitments();
-	SearchCompanyRecruitments(DataBase* dataBase);
+	SearchCompanyRecruitments(DataBase *dataBase);
 
-	SearchCompanyRecruitmentsUI* GetSearchCompanyRecruitmentsUI() { return searchCompanyRecruitmentsUI; }
+	SearchCompanyRecruitmentsUI *getSearchCompanyRecruitmentsUI() { return searchCompanyRecruitmentsUI; }
 
-	vector<Recruitment*> ShowCompanyRecruitments();
+	vector<Recruitment *> showCompanyRecruitments();
 
 private:
-	DataBase* dataBase;
-	SearchCompanyRecruitmentsUI* searchCompanyRecruitmentsUI;
+	DataBase *dataBase;
+	SearchCompanyRecruitmentsUI *searchCompanyRecruitmentsUI;
 };

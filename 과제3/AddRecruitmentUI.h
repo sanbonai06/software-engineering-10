@@ -8,7 +8,7 @@ class AddRecruitmentUI
 public:
 	AddRecruitmentUI();
 
-	void StartInterface();
+	void startInterface();
 
-	void createNewRecruitment(AddRecruitment* Addrecruitment, File* file);
+	void createNewRecruitment(AddRecruitment *Addrecruitment, File *file);
 };

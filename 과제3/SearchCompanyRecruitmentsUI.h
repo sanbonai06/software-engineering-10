@@ -8,6 +8,6 @@ class SearchCompanyRecruitmentsUI
 public:
 	SearchCompanyRecruitmentsUI();
 
-	void StartInterface();
-	void SelectCompanyRecruitments(SearchCompanyRecruitments* searchCompanyRecruitments, File* file);
+	void startInterface();
+	void selectCompanyRecruitments(SearchCompanyRecruitments *searchCompanyRecruitments, File *file);
 };

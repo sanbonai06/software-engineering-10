@@ -15,7 +15,7 @@ void LogoutUI::startInterface()
 void LogoutUI::selectLogout(Logout* logout, File* file)
 {
     
-    string result = logout->TryLogout();
+    string result = logout->tryLogout();
     file->ofs << "2.2. 로그아웃" << '\n';
     file->ofs << "> " << result << " " << "\n" << "\n";
 }

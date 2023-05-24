@@ -6,18 +6,18 @@ using namespace std;
 
 ExitMemberUI::ExitMemberUI()
 {
-
 }
 
-void ExitMemberUI::StartInterface()
+void ExitMemberUI::startInterface()
 {
 	// GUI��� PopUpâ ����, �̹� ���������� ���� ������̱� ������ �ƹ��� ����� ���� ����.
 }
 
-void ExitMemberUI::SelectExitMember(ExitMember* exitMember, File* file)
+void ExitMemberUI::selectExitMember(ExitMember *exitMember, File *file)
 {
-	
+
 	file->ofs << "1.2. ȸ��Ż��" << '\n';
-	file->ofs << "> " << exitMember->TryExitMember() << " " << '\n' << '\n';
+	file->ofs << "> " << exitMember->tryExitMember() << " " << '\n'
+			  << '\n';
 
 }

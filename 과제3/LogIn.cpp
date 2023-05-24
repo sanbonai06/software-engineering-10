@@ -13,7 +13,7 @@ LogIn::LogIn(DataBase* db) {
 
 Member* LogIn::checkMemberInfo(string id, string password) {
     
-    vector<Member*> newMemberList = db->GetMemberList();
+    vector<Member*> newMemberList = db->getMemberList();
     for(int i=0; i<newMemberList.size(); i++) {
         if(newMemberList[i]->checkIdAndPassword(id, password)) {
 			db->setLogInIndex(i);
