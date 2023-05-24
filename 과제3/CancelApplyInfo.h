@@ -1,5 +1,5 @@
 #pragma once
-#include <cstring>
+#include <string>
 using namespace std;
 
 class DataBase;

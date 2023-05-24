@@ -24,5 +24,4 @@ vector<ApplyInfo*> SearchRecruitments::showSearchedRecruitments()
 	GeneralMember* loginMember = dynamic_cast<GeneralMember*>(findMember);
 	if(std::stoi(loginMember->getType()) == 2) 
 		return loginMember->getApplyInfoList();
-	return NULL;
 }

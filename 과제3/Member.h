@@ -16,8 +16,6 @@ public:
 	void CheckMember();
 	void CreateMember();
 	void DeleteMember();
-	void CreateRecruitment(Recruitment* newRecruitment);
-	void createApply(ApplyInfo* newApplyInfo);
 	bool checkIdAndPassword(string id, string password);
 	bool checkId(string id);
 	//void CheckLogInInfo();
@@ -54,8 +52,6 @@ public:
 	virtual void toPoly() {
 		std::cout<<"Parent"<<"\n";
 	}
-
-	virtual ~Member();
 
 private:
 	std::string user_type;

@@ -16,5 +16,5 @@ ApplyInfo* GeneralMember::deleteApplyInfo(string businessNumber) {
 }
 
 void GeneralMember::createApply(ApplyInfo* applyInfo) {
-    this->listApplyInfos.push_back(applyInfo);
+    this->listOfApplyInfos.push_back(applyInfo);
 }

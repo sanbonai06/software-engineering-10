@@ -23,6 +23,10 @@
 #include "SearchCompanyRecruitmentsUI.h"
 #include "CancelApplyInfo.h"
 #include "CancelApplyInfoUI.h"
+#include "GeneralMember.h"
+#include "CompanyMember.h"
+#include "Member.h"
+#include "Recruitment.h"
 
 
 void doTask();

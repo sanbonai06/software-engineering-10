@@ -29,6 +29,6 @@ void AddRecruitment::AddNewRecruitment(std::string task, std::string recruitment
 		std::string ssn = member->getSSN();
 		Recruitment* newRecruitment = new Recruitment(task, recruitmentNumber, deadline, name, ssn);
 		newRecruitment->SetMemberID(dataBase->GetMemberList()[dataBase->GetLogInIndex()]->getID());
-		member->CreateRecruitment(newRecruitment);
+		member->createRecruitment(newRecruitment);
 	}
 }

@@ -8,8 +8,8 @@ using namespace std;
 
 
 ApplyInfo* CancelApplyInfo::cancelApplyInfo(string businessNumber) {
-    int loginIndex = this->dataBase->GetLogInIndex();
-    vector<Member*> memberList = this->dataBase->GetMemberList(); 
+    int loginIndex = dataBase->GetLogInIndex();
+    vector<Member*> memberList = dataBase->GetMemberList(); 
     Member* loginMember = memberList[loginIndex];
     GeneralMember* generalMember = dynamic_cast<GeneralMember*>(loginMember);
     return generalMember->deleteApplyInfo(businessNumber);
