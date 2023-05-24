@@ -16,6 +16,7 @@ public:
 	void CreateMember();
 	void DeleteMember();
 	void CreateRecruitment(Recruitment* newRecruitment);
+	void createApply(ApplyInfo* newApplyInfo);
 	bool checkIdAndPassword(string id, string password);
 	bool checkId(string id);
 	//void CheckLogInInfo();
@@ -30,7 +31,7 @@ public:
 		return user_type;
 	}
 	std::vector<Recruitment*> GetRecruitmentList() { return listOfRecruitments; }
-
+	std::vector<ApplyInfo*> getApplyInfoLIst() { return listApplyInfos; }
 private:
 	std::string user_type;
 	std::string name;
@@ -38,4 +39,5 @@ private:
 	std::string id;
 	std::string password;
 	std::vector<Recruitment*> listOfRecruitments;
+	std::vector<ApplyInfo*> listApplyInfos;
 };

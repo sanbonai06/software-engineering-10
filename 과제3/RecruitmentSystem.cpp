@@ -122,7 +122,7 @@ void doTask()
 			case 2:
 			{
 				ApplyRecruitment* applyRecruitment = new ApplyRecruitment(dataBase);
-				applyRecruitment->getApplyRecruitmentUI()->callSelectRecruitment(applyRecruitment, file);
+				applyRecruitment->getApplyRecruitmentUI()->callSelectApply(applyRecruitment, file);
 				break;
 			}
 			case 3:

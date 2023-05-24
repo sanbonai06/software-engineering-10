@@ -20,6 +20,11 @@ void Member::CreateRecruitment(Recruitment* newRecruitment)
 	listOfRecruitments.push_back(newRecruitment);
 }
 
+void Member::createApply(ApplyInfo* newApplyInfo)
+{
+	listApplyInfos.push_back(newApplyInfo);
+}
+
 bool Member::checkIdAndPassword(string id, string password) {
 	return strcmp(this->id.c_str(), id.c_str()) == 0 && 
                 strcmp(this->password.c_str(), password.c_str()) == 0;
