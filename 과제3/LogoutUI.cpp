@@ -19,6 +19,7 @@ void LogoutUI::selectLogout(Logout* logout, File* file)
 	file->ifs >> id;
 	file->readed = file->ifs.tellg();
     string result = logout->TryLogout(id);
+    cout<<result<<"\n";
     file->ofs << "2.2. �α׾ƿ�" << '\n';
     file->ofs << "> " << result << " " << "\n" << "\n";
 }
