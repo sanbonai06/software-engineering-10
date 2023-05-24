@@ -6,6 +6,9 @@
 #include "CompanyMember.h"
 using namespace std;
 
+/**
+ * 기본 생성자
+ */
 AddRecruitment::AddRecruitment()
 {
 	this->dataBase = nullptr;
@@ -13,6 +16,10 @@ AddRecruitment::AddRecruitment()
 	addRecruitmentUI->startInterface();
 }
 
+/**
+ * dataBase를 받아와 클래스의 dataBase에 연결하는 생성자
+ * @param dataBase
+ */
 AddRecruitment::AddRecruitment(DataBase *dataBase)
 {
 	this->dataBase = dataBase;
@@ -20,6 +27,12 @@ AddRecruitment::AddRecruitment(DataBase *dataBase)
 	addRecruitmentUI->startInterface();
 }
 
+/**
+ * task, recruitmentNumber, deadline을 받아와 현재 로그인중인 회사멤버의 채용정보 리스트에 등록
+ * @param task
+ * @param recruitmentNumber
+ * @param deadline
+ */
 void AddRecruitment::addNewRecruitment(string task, string recruitmentNumber, string deadline)
 {
 	Member *findMember = dataBase->getMemberList()[dataBase->getLogInIndex()];

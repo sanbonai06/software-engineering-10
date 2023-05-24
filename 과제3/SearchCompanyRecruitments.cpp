@@ -6,6 +6,9 @@
 #include "CompanyMember.h"
 using namespace std;
 
+/**
+ * 기본 생성자
+ */
 SearchCompanyRecruitments::SearchCompanyRecruitments()
 {
 	this->dataBase = nullptr;
@@ -13,6 +16,10 @@ SearchCompanyRecruitments::SearchCompanyRecruitments()
 	searchCompanyRecruitmentsUI->startInterface();
 }
 
+/**
+ * dataBase를 받아와 클래스의 dataBase에 연결하는 생성자
+ * @param dataBase
+ */
 SearchCompanyRecruitments::SearchCompanyRecruitments(DataBase* dataBase)
 {
 	this->dataBase = dataBase;
@@ -20,6 +27,10 @@ SearchCompanyRecruitments::SearchCompanyRecruitments(DataBase* dataBase)
 	searchCompanyRecruitmentsUI->startInterface();
 }
 
+/**
+ * 현재 로그인중인 회사멤버가 등록한 채용정보 리스트를 반환
+ * @return member->getRecruitmentList()
+ */
 vector<Recruitment*> SearchCompanyRecruitments::showCompanyRecruitments()
 {
 	Member* findMember = dataBase->getMemberList()[dataBase->getLogInIndex()];
