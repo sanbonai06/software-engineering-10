@@ -31,14 +31,30 @@ public:
 	string getType() {
 		return user_type;
 	}
-	std::vector<Recruitment*> GetRecruitmentList() { return listOfRecruitments; }
-	std::vector<ApplyInfo*> getApplyInfoLIst() { return listApplyInfos; }
+	void setUserType(string newUserType) {
+		this->user_type = newUserType;
+	}
+
+	void setName(string name) {
+		this->name = name;
+	}
+
+	void setSsn(string ssn) {
+		this->ssn = ssn;
+	}
+
+	void setId(string id) {
+		this->id = id;
+	}
+
+	void setPassword(string password) {
+		this->password = password;
+	}
+
 private:
 	std::string user_type;
 	std::string name;
 	std::string ssn;
 	std::string id;
 	std::string password;
-	std::vector<Recruitment*> listOfRecruitments;
-	std::vector<ApplyInfo*> listApplyInfos;
 };
