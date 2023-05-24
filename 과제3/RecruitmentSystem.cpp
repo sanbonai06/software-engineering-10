@@ -21,6 +21,8 @@
 #include "ApplyInfo.h"
 #include "StatisticsApplyInformation.h"
 #include "SearchCompanyRecruitmentsUI.h"
+#include "CancelApplyInfo.h"
+#include "CancelApplyInfoUI.h"
 
 
 void doTask();
@@ -137,6 +139,9 @@ void doTask()
 			}
 				case 4:
 				{
+					CancelApplyInfo* cancelApplyInfo = new CancelApplyInfo(dataBase);
+					cancelApplyInfo->getCancelApplyInfoUI()->callAbortApplyInfo(cancelApplyInfo, file);
+					
 					break;
 				}
 			}

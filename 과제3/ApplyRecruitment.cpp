@@ -5,6 +5,8 @@
 #include "Member.h"
 #include "DataBase.h"
 #include "ApplyInfo.h"
+#include "GeneralMember.h"
+#include "CompanyMember.h"
 
 using namespace std;
 
@@ -24,7 +26,8 @@ ApplyRecruitment::ApplyRecruitment(DataBase* dataBase)
 
 ApplyInfo* ApplyRecruitment::addApplyRecruitment(string businessNumber)
 {
-	Member* loginMember = dataBase->GetMemberList()[dataBase->GetLogInIndex()];
+	Member* member = dataBase->GetMemberList()[dataBase->GetLogInIndex()];
+	GeneralMember* loginMember = dynamic_cast<GeneralMember*>(member);
 
 	vector<Member*> companyMemberList = this->dataBase->GetMemberList();
 
@@ -33,7 +36,8 @@ ApplyInfo* ApplyRecruitment::addApplyRecruitment(string businessNumber)
 	{
 		if (companyMemberList[i]->getType() == "1")
 		{
-			vector<Recruitment*> listOfRecruitments = companyMemberList[i]->GetRecruitmentList();
+			CompanyMenber* companyMember = dynamic_cast<CompanyMember*>(companyMemberList[i]);
+			vector<Recruitment*> listOfRecruitments = companyMember->getRecruitmentList();
 
 			for (int j = 0; j < listOfRecruitments.size(); j++)
 			{

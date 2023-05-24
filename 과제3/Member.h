@@ -51,6 +51,12 @@ public:
 		this->password = password;
 	}
 
+	virtual void toPoly() {
+		std::cout<<"Parent"<<"\n";
+	}
+
+	virtual ~Member();
+
 private:
 	std::string user_type;
 	std::string name;

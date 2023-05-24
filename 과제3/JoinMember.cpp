@@ -32,7 +32,7 @@ bool JoinMember::AddNewMember(std::string user_type, std::string name, std::stri
 		}
 	}
 
-	if (strcmp(user_type, "1") == 0) {
+	if (std::stoi(user_type) == 1) {
 		CompanyMember* member = new CompanyMember(user_type, name, ssn, id, password);
 		dataBase->AddMember(member);
 

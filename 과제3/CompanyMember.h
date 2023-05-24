@@ -16,4 +16,4 @@ class CompanyMember : public Member {
 
         vector<Recruitment*> getRecruitmentList() { return listOfRecruitments; }
 
-}
+};

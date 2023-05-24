@@ -3,6 +3,7 @@
 #include "DataBase.h"
 #include "Recruitment.h"
 #include "Member.h"
+#include "CompanyMember.h"
 
 SearchCompanyRecruitments::SearchCompanyRecruitments()
 {
@@ -20,6 +21,9 @@ SearchCompanyRecruitments::SearchCompanyRecruitments(DataBase* dataBase)
 
 std::vector<Recruitment*> SearchCompanyRecruitments::ShowCompanyRecruitments()
 {
-	Member* Member = dataBase->GetMemberList()[dataBase->GetLogInIndex()];
-	return Member->GetRecruitmentList();
+	Member* findMember = dataBase->GetMemberList()[dataBase->GetLogInIndex()];
+	CompanyMember* member = dynamic_cast<CompanyMember*>(findMember);
+	if(std::stoi(member->getType()) == 1)
+		return member->getRecruitmentList();
+	return NULL;
 }

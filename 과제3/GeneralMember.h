@@ -13,6 +13,6 @@ class GeneralMember : public Member {
             listOfApplyInfos.clear();
         }
         GeneralMember(string user_type, string name, string ssn, string id, string password) : Member(user_type, name, ssn, id, password) {}
-        vector<ApplyInfo*> getApplyInfoLIst() { return listApplyInfos; }
-
-}
+        vector<ApplyInfo*> getApplyInfoList() { return listOfApplyInfos; }
+        ApplyInfo* deleteApplyInfo(string businessNumber);
+};

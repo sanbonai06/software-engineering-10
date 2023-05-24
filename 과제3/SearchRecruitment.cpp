@@ -3,6 +3,7 @@
 #include "DataBase.h"
 #include "Member.h"
 #include "Recruitment.h"
+#include "CompanyMember.h"
 
 SearchRecruitment::SearchRecruitment()
 {
@@ -27,7 +28,8 @@ vector<Recruitment*> SearchRecruitment::showSearchedRecruitment(string name)
 	{
 		if (memberList[i]->getType() == "1" && memberList[i]->getName() == name)
 		{
-			return memberList[i]->GetRecruitmentList();
+			CompanyMember* companyMember = dynamic_cast<CompanyMember*>(memberList[i]);
+			return companyMember->getRecruitmentList();
 		}
 	}
 

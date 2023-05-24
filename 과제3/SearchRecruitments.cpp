@@ -2,6 +2,7 @@
 #include "SearchRecruitmentsUI.h"
 #include "Member.h"
 #include "DataBase.h"
+#include "GeneralMember.h"
 
 SearchRecruitments::SearchRecruitments()
 {
@@ -19,6 +20,9 @@ SearchRecruitments::SearchRecruitments(DataBase* dataBase)
 
 vector<ApplyInfo*> SearchRecruitments::showSearchedRecruitments()
 {
-	Member* loginMember = dataBase->GetMemberList()[dataBase->GetLogInIndex()];
-	return loginMember->getApplyInfoLIst();
+	Member* findMember = dataBase->GetMemberList()[dataBase->GetLogInIndex()];
+	GeneralMember* loginMember = dynamic_cast<GeneralMember*>(findMember);
+	if(std::stoi(loginMember->getType()) == 2) 
+		return loginMember->getApplyInfoList();
+	return NULL;
 }
