@@ -13,7 +13,7 @@ void SearchRecruitmentsUI::selectRecruitments(SearchRecruitments* searchRecruitm
 {
 	vector<Recruitment*> data = searchRecruitments->showSearchedRecruitments();
 
-	file->ofs << "4.3 Áö¿ø Á¤º¸ Á¶È¸" << "\n";
+	file->ofs << "4.3 ì§€ì› ì •ë³´ ì¡°íšŒ" << "\n";
 	for (int i = 0; i < data.size(); i++)
-		file->ofs << "> " << data[i]->GetCompanyName() << " " << data[i]->BusinessNumber() << " " << data[i]->GetTask() << " " << data[i]->GetRecruitmentNumber() << " " << data[i]->GetDeadline() << "\n";
+		file->ofs << "> " << data[i]->GetCompanyName() << " " << data[i]->BusinessNumber() << " " << data[i]->GetTask() << " " << data[i]->GetRecruitmentNumber() << " " << data[i]->GetDeadline() << "\n\n";
 }

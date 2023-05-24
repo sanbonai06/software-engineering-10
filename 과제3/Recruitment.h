@@ -16,13 +16,15 @@ public:
 	int GetApplyNumber() { return applyNumber; }
 	std::string BusinessNumber() { return businessNumber; }
 
+	void setRecruitmentNumber() { this->recruitmentNumber++; }
+
 private:
 	std::string MemberID;
 	std::string deadline;
 	std::string task;
 	std::string companyName;
 	std::string businessNumber;
-	int recruitmentNumber;	
-	int applyNumber;	
+	int recruitmentNumber;
+	int applyNumber;
 
 };

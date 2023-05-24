@@ -9,12 +9,12 @@ AddRecruitmentUI::AddRecruitmentUI()
 
 void AddRecruitmentUI::StartInterface()
 {
-	// GUI°æ¿ì PopUpÃ¢ »ý¼º, ÀÌ¹ø °úÁ¦¿¡¼­´Â ÆÄÀÏ ÀÔÃâ·ÂÀÌ±â ¶§¹®¿¡ ¾Æ¹«·± ±â´ÉÀ» ÇÏÁö ¾ÊÀ½.
+	// GUIê²½ìš° PopUpì°½ ìƒì„±, ì´ë²ˆ ê³¼ì œì—ì„œëŠ” íŒŒì¼ ìž…ì¶œë ¥ì´ê¸° ë•Œë¬¸ì— ì•„ë¬´ëŸ° ê¸°ëŠ¥ì„ í•˜ì§€ ì•ŠìŒ.
 }
 
-void AddRecruitmentUI::GetRecruitmentForm(AddRecruitment* AddRecruitment, File* file)
+void AddRecruitmentUI::createNewRecruitment(AddRecruitment* AddRecruitment, File* file)
 {
-	// ÆÄÀÏ ÀÔ·Â ¹Þ±â
+	// íŒŒì¼ ìž…ë ¥ ë°›ê¸°
 	std::string task = "";
 	std::string recruitmentNumber = "";
 	std::string deadline = "";
@@ -25,9 +25,9 @@ void AddRecruitmentUI::GetRecruitmentForm(AddRecruitment* AddRecruitment, File* 
 
 	AddRecruitment->AddNewRecruitment(task, recruitmentNumber, deadline);
 
-	file->ofs << "3.1. Ã¤¿ë Á¤º¸ µî·Ï" << '\n';
+	file->ofs << "3.1. ì±„ìš© ì •ë³´ ë“±ë¡" << '\n';
 
-	std::cout << "3.1. Ã¤¿ë Á¤º¸ µî·Ï" << '\n';
+	std::cout << "3.1. ì±„ìš© ì •ë³´ ë“±ë¡" << '\n';
 
 	file->ofs << "> " << task << " " << recruitmentNumber << " " << deadline << '\n' << '\n';
 

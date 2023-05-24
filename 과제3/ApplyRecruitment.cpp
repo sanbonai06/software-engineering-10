@@ -27,9 +27,10 @@ Recruitment* ApplyRecruitment::applyRecruitment(string businessNumber)
 
 	vector<Member*> companyMemberList = this->dataBase->GetMemberList();
 
+
 	for (int i = 0; i < companyMemberList.size(); i++)
 	{
-		if (companyMemberList[i]->getUserType() == "1")
+		if (companyMemberList[i]->getType() == "1")
 		{
 			vector<Recruitment*> listOfRecruitments = companyMemberList[i]->GetRecruitmentList();
 
@@ -38,6 +39,8 @@ Recruitment* ApplyRecruitment::applyRecruitment(string businessNumber)
 				if (listOfRecruitments[j]->BusinessNumber() == businessNumber)
 				{
 					listOfRecruitments[j]->setRecruitmentNumber();
+					loginMember->CreateRecruitment(listOfRecruitments[j]);
+					
 					return listOfRecruitments[j];
 				}
 

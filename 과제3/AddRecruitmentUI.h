@@ -10,5 +10,5 @@ public:
 
 	void StartInterface();
 
-	void GetRecruitmentForm(AddRecruitment* Addrecruitment, File* file);
+	void createNewRecruitment(AddRecruitment* Addrecruitment, File* file);
 };
