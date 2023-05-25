@@ -6,7 +6,7 @@ Member::Member()
 	id = 1; // For Test
 }
 
-Member::Member(std::string user_type, string name, string ssn, string id, string password)
+Member::Member(string user_type, string name, string ssn, string id, string password)
 {
 	this->user_type = user_type;
 	this->name = name;
