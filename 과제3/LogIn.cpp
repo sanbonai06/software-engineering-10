@@ -7,10 +7,6 @@
 #include <string>
 using namespace std;
 
-LogIn::LogIn(DataBase* db) {
-    this->db = db;
-}
-
 /**
  * id와 password를 통해 유저 정보를 찾아서 반환
  * @param id 
