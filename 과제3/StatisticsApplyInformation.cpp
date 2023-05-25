@@ -10,7 +10,9 @@
 #include <map>
 using namespace std;
 
-
+/**
+ * 기본 생성자
+ */
 StatisticsApplyInformation::StatisticsApplyInformation()
 {
 	this->dataBase = nullptr;
@@ -18,6 +20,10 @@ StatisticsApplyInformation::StatisticsApplyInformation()
 	statisticsApplyInformationUI->startInterface();
 }
 
+/**
+ * dataBase를 받아와 클래스의 dataBase에 연결하는 생성자
+ * @param dataBase
+ */
 StatisticsApplyInformation::StatisticsApplyInformation(DataBase* dataBase)
 {
 	this->dataBase = dataBase;
@@ -25,7 +31,10 @@ StatisticsApplyInformation::StatisticsApplyInformation(DataBase* dataBase)
 	statisticsApplyInformationUI->startInterface();
 }
 
-
+/**
+ * task, recruitmentNumber, deadline을 받아와 현재 로그인중인 회사멤버의 채용정보 리스트에 등록
+ * @param taskCountMap
+ */
 void StatisticsApplyInformation::showStaticsApplyInformation(map<string, int>& taskCountMap)
 {
 	Member* member = dataBase->getMemberList()[dataBase->getLogInIndex()];
@@ -35,12 +44,12 @@ void StatisticsApplyInformation::showStaticsApplyInformation(map<string, int>& t
     if(stoi(memberType) == 1){
         vector<Recruitment*> taskList = dynamic_cast<CompanyMember*>(member)->getRecruitmentList();
         
-        // 초기화. 더 나은 방법이 떠오르시면 고쳐주세요 :)
+        // 초기화
         for (int i = 0; i < taskList.size(); i++) {
              string task = taskList[i]->getTask();
             taskCountMap[task] = 0;
         }
-
+        // 업부 별 지원자 수
         for (int i = 0; i < taskList.size(); i++) {
              string task = taskList[i]->getTask();
             taskCountMap[task] += taskList[i]->getApplyNumber();
@@ -50,6 +59,7 @@ void StatisticsApplyInformation::showStaticsApplyInformation(map<string, int>& t
     else{
         vector<ApplyInfo*> taskList = dynamic_cast<GeneralMember*>(member)->getApplyInfoList();
 
+        // 업무 별 지원 횟수
         for (int i = 0; i < taskList.size(); i++) {
              string task = taskList[i]->getTask();
             taskCountMap[task]++;

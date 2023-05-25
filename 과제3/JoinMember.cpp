@@ -7,6 +7,9 @@
 #include <cstring>
 using namespace std;
 
+/**
+ * 기본 생성자
+ */
 JoinMember::JoinMember()
 {
 	this->dataBase = nullptr;
@@ -14,6 +17,10 @@ JoinMember::JoinMember()
 	joinMemberUI->startInterface();
 }
 
+/**
+ * dataBase를 받아와 클래스의 dataBase에 연결하는 생성자
+ * @param dataBase
+ */
 JoinMember::JoinMember(DataBase* dataBase)
 {
 	this->dataBase = dataBase;
@@ -21,6 +28,15 @@ JoinMember::JoinMember(DataBase* dataBase)
 	joinMemberUI->startInterface();
 }
 
+/**
+ * user_type, name, ssn, id, password을 받아와 이미 존재하는 회원인지 아닌지를 확인하고 존재하지 않을 경우 MemberList에 추가
+ * @param user_type
+ * @param name
+ * @param ssn
+ * @param id
+ * @param password
+ * @return boolean
+ */
 bool JoinMember::addNewMember(string user_type,  string name,  string ssn,  string id,  string password)
 {
 	int i = 0;
