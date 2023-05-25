@@ -51,7 +51,6 @@ public:
 
 	virtual void toPoly() {
 		cout << "Parent"
-				  << "\n";
 	}
 
 private:
