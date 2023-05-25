@@ -11,20 +11,17 @@ class Member
 {
 public:
 	Member();
-	Member(std::string user_type,  string name,  string ssn,  string id,  string password);
+	Member(string user_type,  string name,  string ssn,  string id,  string password);
 
-	void CheckMember();
-	void CreateMember();
-	void DeleteMember();
 	bool checkIdAndPassword(string id, string password);
 	bool checkId(string id);
 	//void CheckLogInInfo();
 
-	std::string getID() {
+	string getID() {
 		return id; }
-	std::string getSSN() {
+	string getSSN() {
 		return ssn; }
-	std::string getPassword() {
+	string getPassword() {
 		return password; }
 	string getName() {
 		return name;
@@ -53,14 +50,14 @@ public:
 	}
 
 	virtual void toPoly() {
-		std::cout << "Parent"
+		cout << "Parent"
 				  << "\n";
 	}
 
 private:
-	std::string user_type;
-	std::string name;
-	std::string ssn;
-	std::string id;
-	std::string password;
+	string user_type;
+	string name;
+	string ssn;
+	string id;
+	string password;
 };
